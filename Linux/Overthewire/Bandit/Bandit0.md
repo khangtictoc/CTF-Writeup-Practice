@@ -6,4 +6,8 @@ ssh<br>
 - **Helpful Reading Material:**<br>
 [Secure Shell (SSH) on Wikipedia](https://en.wikipedia.org/wiki/Secure_Shell)<br>
 [How to use SSH on wikiHow](https://www.wikihow.com/Use-SSH)<br>
-- ## Write-up: 📝<br>
+## Write-up: 📝<br>
+In this chall, we just connect remotely to their server by using "ssh" <br>
+`ssh   bandit.labs.overthewire.org -l bandit0 -p 2220`
+With -l: choose user to login
+     -p: port to connect
