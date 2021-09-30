@@ -11,5 +11,4 @@ In this chall, we read "readme" file in current location by using cat command<br
 Use `man cat` for more details<br>
 ### Solution:<br>
 Command: `cat readme`<br>
-### Other Solution:<br>
 #### Password for next level: boJ9jbbUNNfktd78OOpsqOltutMc3MY1
