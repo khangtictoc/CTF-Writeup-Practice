@@ -7,9 +7,9 @@ ls, cd, cat, file, du, find<br>
 User: bandit0<br>
 Pass: bandit0<br>
 ## Write-up: 📝<br>
-In this chall, we read "readme" file by using cat command<br>
+In this chall, we read "readme" file in current location by using cat command<br>
 Use `man cat` for more details<br>
 ### Solution:<br>
-Command: `cat`<br>
+Command: `cat readme`<br>
 ### Other Solution:<br>
 #### Password for next level: boJ9jbbUNNfktd78OOpsqOltutMc3MY1
