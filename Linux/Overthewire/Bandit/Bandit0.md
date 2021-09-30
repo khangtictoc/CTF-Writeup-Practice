@@ -18,6 +18,7 @@ With<br>
 -l: choose user to login<br>
 -p: port to connect<br>
 ### Other Solution:<br>
+For shorter, we can use:<br>
 Syntax: `ssh user@host -l port`<br>
 Command: `ssh   bandit0@bandit.labs.overthewire.org -p 2220`<br>
 
