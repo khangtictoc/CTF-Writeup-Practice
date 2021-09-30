@@ -9,5 +9,6 @@ ssh<br>
 ## Write-up: 📝<br>
 In this chall, we just connect remotely to their server by using "ssh" <br>
 `ssh   bandit.labs.overthewire.org -l bandit0 -p 2220`<br>
-With -l: choose user to login<br>
-     -p: port to connect<br>
+With<br>
+-l: choose user to login<br>
+-p: port to connect<br>
