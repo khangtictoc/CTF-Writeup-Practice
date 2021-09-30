@@ -6,3 +6,4 @@ ssh
 **Helpful Reading Material**
 [Secure Shell (SSH) on Wikipedia](https://en.wikipedia.org/wiki/Secure_Shell)
 [How to use SSH on wikiHow](https://www.wikihow.com/Use-SSH)
+## Write-up: 📝
