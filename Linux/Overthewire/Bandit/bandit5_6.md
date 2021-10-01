@@ -15,7 +15,7 @@ Use `man find` for more details
 ### Solution:<br>
 - Find the file
 Command: `find ./inhere -readable -size 1033c \! -executable`<br>
-\!: negative flag
+\\!: negative flag
 - Cat **".hidden"** file
 Command: `cat ./inhere/maybehere07/.file2`
 #### Password for next level: DXjZPULLxYr17uwoI01bNLQbtFemEgo7
