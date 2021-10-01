@@ -3,7 +3,6 @@
 The password for the next level is stored in the only human-readable file in the inhere directory. Tip: if your terminal is messed up, try the “reset” command.<br>
 - **Commands you may need to solve this level:**<br>
 ls, cd, cat, file, du, find<br>
-ssh<br>
 - **Login SSH:**<br>
 User: bandit4<br>
 Pass: pIwrPrtPN36QITSp3EQaw936yaFoFgAB<br>
