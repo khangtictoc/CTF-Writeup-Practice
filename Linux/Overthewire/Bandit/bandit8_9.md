@@ -13,4 +13,5 @@ In this chall, we need to sort the content of the file in an order, then filter 
 Use `man sort` and `man uniq` for more details
 ### Solution:<br>
 - Sort the file, then output the unique line: `sort data.txt | uniq -u`<br>
+-u: --unique
 #### Password for next level: UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
