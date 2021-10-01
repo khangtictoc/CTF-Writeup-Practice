@@ -10,8 +10,11 @@ ssh<br>
 User: bandit2<br>
 Pass: CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9<br>
 ## Write-up: 📝<br>
-In this chall, we need to read a so-called "dashed" filename.Normally, the "-" sign specify the parameter in the command. So we have to use a special syntax to differentiate between this.  <br>
-Syntax: `cat ./{(-)filename}` or `cat <(-)filename`<br>
+In this chall, we need to read a filename contain "space". Normally, when we use command (for example: cat) with " " in file name, they will split into 2 file , seperated by that space. So in this case, we have a special syntax to tell that this is one file with space contained<br>
+Syntax: `cat '{file name with space}' `<br>
+Alternative:<br>
+`cat "{file name with space}" `<br>
+`cat {file\ name\ with\ space} `<br>
 ### Solution:<br>
-Command: `cat ./-`<br>
-#### Password for next level: CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
+Command: `cat "spaces in this filename"`<br>
+#### Password for next level: UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
