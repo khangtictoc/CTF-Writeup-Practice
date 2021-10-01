@@ -8,14 +8,10 @@ not executable<br>
 grep, sort, uniq, strings, base64, tr, tar, gzip, bzip2, xxd<br>
 - **Login SSH:**<br>
 User: bandit7<br>
-Pass: koReBOKuIDDepwhWk7jZC0RTdopnAYKh<br>
+Pass: HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs<br>
 ## Write-up: 📝<br>
-In this chall, we need to find the file which meets the given requirement in **inhere** Dir<br>
-Use `man find` for more details
+In this chall, we need to manipulate the data in data.txt file<br>
+Use `man grep` for more details
 ### Solution:<br>
-- Find the file
-Command: `find ./inhere -readable -size 1033c \! -executable`<br>
-\!: negative flag
-- Cat **".hidden"** file
-Command: `cat ./inhere/maybehere07/.file2`
-#### Password for next level: DXjZPULLxYr17uwoI01bNLQbtFemEgo7
+Command: `cat data.txt | grep millionth`<br>
+#### Password for next level: cvX2JJa4CFALtqS87jk27qwqGhBM9plV
