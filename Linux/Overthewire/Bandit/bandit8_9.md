@@ -10,7 +10,7 @@ User: bandit8<br>
 Pass: cvX2JJa4CFALtqS87jk27qwqGhBM9plV<br>
 ## Write-up: 📝<br>
 In this chall, we need to find the file which meets the given requirement in current Dir<br>
-Use `man find` for more details
+Use `man sort` and `man uniq` for more details
 ### Solution:<br>
-- Sort the file, then output the unique line `sort data.txt | uniq -u`<br>
+- Sort the file, then output the unique line: `sort data.txt | uniq -u`<br>
 #### Password for next level: UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
