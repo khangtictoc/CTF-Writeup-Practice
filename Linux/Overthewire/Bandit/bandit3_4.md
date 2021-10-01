@@ -20,4 +20,4 @@ Command: `ls -a`<br>
 - Cat **".hidden"** file
 Command: `cat .hidden`
 
-#### Password for next level: CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
+#### Password for next level: pIwrPrtPN36QITSp3EQaw936yaFoFgAB
