@@ -9,7 +9,7 @@ grep, sort, uniq, strings, base64, tr, tar, gzip, bzip2, xxd<br>
 User: bandit8<br>
 Pass: cvX2JJa4CFALtqS87jk27qwqGhBM9plV<br>
 ## Write-up: 📝<br>
-In this chall, we need to find the file which meets the given requirement in current Dir<br>
+In this chall, we need to sort the content of the file in an order, then filter the unique line<br>
 Use `man sort` and `man uniq` for more details
 ### Solution:<br>
 - Sort the file, then output the unique line: `sort data.txt | uniq -u`<br>
