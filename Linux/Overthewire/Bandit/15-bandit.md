@@ -15,7 +15,6 @@ Pass: BfMYroe26WYalil77FoDi9qh59eK5xNr<br>
 In this chall, we have to connect to port 30000 on localhost and we have to send a string containing the current password. <br>
 Use `man nc` for more details
 ### Solution:<br>
-- Connect to localhost:30000: `nc localhost 30000`
-- Type the current password: `4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e`
-#### Password for next level: BfMYroe26WYalil77FoDi9qh59eK5xNr 
+- Connect securely (SSL encryption) to localhost:30001: `openssl s_client -connect localhost:30001`
+#### Password for next level: cluFn7wTiGryunymYOu4RcffSxQluehd 
 
