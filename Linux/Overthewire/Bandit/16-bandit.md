@@ -4,15 +4,16 @@ The credentials for the next level can be retrieved by submitting the password o
 - **Commands you may need to solve this level:**<br>
 ssh, telnet, nc, openssl, s_client, nmap<br>
 - **Helpful Reading Material:** <br>
-[Secure Socket Layer/Transport Layer Security on Wikipedia](https://en.wikipedia.org/wiki/Secure_Socket_Layer)<br>
-[OpenSSL Cookbook - Testing with OpenSSL](https://www.feistyduck.com/library/openssl-cookbook/online/ch-testing-with-openssl.html)<br>                                             
+[Port scanner on Wikipedia](https://en.wikipedia.org/wiki/Port_scanner)<br>                                     
 - **Login SSH:**<br>
-User: bandit15<br>
-Pass: BfMYroe26WYalil77FoDi9qh59eK5xNr<br>
+User: bandit16<br>
+Pass: cluFn7wTiGryunymYOu4RcffSxQluehd<br>
 ## Write-up: 📝<br>
-In this chall, we have to connect to port 30000 on localhost and we have to send a string containing the current password. <br>
-Use `man nc` for more details
+In this chall, we have to connect to  find out which of these ports have a server listening on them. Then find out which of those speak SSL <br>
+Use `man nmap` for more details
 ### Solution:<br>
-- Connect securely (SSL encryption) to localhost:30001: `openssl s_client -connect localhost:30001`
-#### Password for next level: cluFn7wTiGryunymYOu4RcffSxQluehd 
+- Scan ports in given range: `nmap localhost -p 31000-32000`<br>
+- Find right port with this command: `openssl s_client localhost:{port}` with each scanned port.
+- Only port: 31790 give back the private ssh key
+#### Password for next level: xLYVMN9WE5zQ5vHacb0sZEVqbrp7nBTn (After login in Level 17 - Level 18 and read the password)
 
