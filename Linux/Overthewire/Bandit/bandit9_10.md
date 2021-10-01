@@ -7,9 +7,10 @@ grep, sort, uniq, strings, base64, tr, tar, gzip, bzip2, xxd<br>
 User: bandit9<br>
 Pass: UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR<br>
 ## Write-up: 📝<br>
-In this chall, we need to find the file which meets the given requirement in current Dir<br>
-Use `man sort` and `man uniq` for more details
+In this chall,  the file contains both strings and binary data which can make it difficult to read. We have to filter the human-readable characters<br>
+Use `man strings` for more details
 ### Solution:<br>
-- Sort the file, then output the unique line: `sort data.txt | uniq -u`<br>
-#### Password for next level: UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
+- Command: `cat data.txt | strings | grep ^=`<br>
+"^=": a regular expression (regex). Reference here: [All about regex](https://regexr.com/)
+#### Password for next level: truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
 
