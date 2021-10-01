@@ -11,7 +11,7 @@ User: bandit1<br>
 Pass: boJ9jbbUNNfktd78OOpsqOltutMc3MY1<br>
 ## Write-up: 📝<br>
 In this chall, we need to read a so-called "dashed" filename.Normally, the "-" sign specify the parameter in the command. So we have to use a special syntax to differentiate between this.  <br>
-Syntax: `cat ./{(-)filename}` or `cat <(-)filename`<br>
+Syntax: `cat ./{-filename}` or `cat <-{filename}`<br>
 ### Solution:<br>
 Command: `cat ./-`<br>
 #### Password for next level: CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
