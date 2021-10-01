@@ -12,13 +12,15 @@ Pass: bandit0<br>
 ## Write-up: 📝<br>
 In this chall, we just connect remotely to their server by using "ssh" with user:bandit0 & password:bandit0 <br>
 Use `man ssh` for more details<br>
-### Solution:<br>
-Command: `ssh   bandit.labs.overthewire.org -l bandit0 -p 2220`<br>
+Syntax: `ssh user@host -l port`<br>
 With<br>
 -l: choose user to login<br>
 -p: port to connect<br>
-### Other Solution:<br>
 For shorter, we can use:<br>
-Syntax: `ssh user@host -l port`<br>
-Command: `ssh   bandit0@bandit.labs.overthewire.org -p 2220`<br>
+Syntax: `ssh user@host -p port`<br>
+### Solution:<br>
+Command: `ssh  bandit.labs.overthewire.org -l bandit0 -p 2220`<br>
+
+
+
 
