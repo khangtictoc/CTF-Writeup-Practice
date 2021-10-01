@@ -9,7 +9,15 @@ User: bandit3<br>
 Pass: UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK<br>
 ## Write-up: 📝<br>
 In this chall, we need to list all the file (include hidden file) in the current location <br>
-Syntax: `cat ./{(-)filename}` or `cat <(-)filename`<br>
+Use `man ls` and `man cd` for more details
 ### Solution:<br>
-Command: `cat ./-`<br>
+- List all hidden file<br>
+Command: `ls -a`<br>
+- Get into **"inhere"** directory
+Command: `cd inhere`
+- List all hidden file<br>
+Command: `ls -a`<br>
+- Cat **".hidden"** file
+Command: `cat .hidden`
+
 #### Password for next level: CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
