@@ -13,4 +13,5 @@ In this chall, the data has been encoded with base64. We have to decode it<br>
 Use `man decode` for more details
 ### Solution:<br>
 - Command: `cat data.txt | base64 -d`<br>
+-d : --decode
 #### Password for next level: IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
