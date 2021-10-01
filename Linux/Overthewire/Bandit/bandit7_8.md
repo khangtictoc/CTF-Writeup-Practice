@@ -1,9 +1,6 @@
 # Level 7 - Level 8 ✔
 - **Level Goal:**:<br>
-The password for the next level is stored in a file somewhere under the inhere directory and has all of the following properties:<br>
-human-readable<br>
-1033 bytes in size<br>
-not executable<br>
+The password for the next level is stored in the file data.txt next to the word millionth<br>
 - **Commands you may need to solve this level:**<br>
 grep, sort, uniq, strings, base64, tr, tar, gzip, bzip2, xxd<br>
 - **Login SSH:**<br>
