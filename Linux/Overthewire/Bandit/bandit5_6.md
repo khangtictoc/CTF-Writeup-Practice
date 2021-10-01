@@ -6,7 +6,6 @@ human-readable<br>
 not executable<br>
 - **Commands you may need to solve this level:**<br>
 ls, cd, cat, file, du, find<br>
-ssh<br>
 - **Login SSH:**<br>
 User: bandit5<br>
 Pass: koReBOKuIDDepwhWk7jZC0RTdopnAYKh<br>
@@ -16,6 +15,7 @@ Use `man find` for more details
 ### Solution:<br>
 - Find the file
 Command: `find ./inhere -readable -size 1033c \! -executable`<br>
+\!: negative flag
 - Cat **".hidden"** file
 Command: `cat ./inhere/maybehere07/.file2`
 #### Password for next level: DXjZPULLxYr17uwoI01bNLQbtFemEgo7
