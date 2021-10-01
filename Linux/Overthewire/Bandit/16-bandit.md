@@ -13,7 +13,7 @@ In this chall, we have to connect to  find out which of these ports have a serve
 Use `man nmap` for more details
 ### Solution:<br>
 - Scan ports in given range: `nmap localhost -p 31000-32000`<br>
-- Find right port with this command: `openssl s_client localhost:{port}` with each scanned port.
+- Find right port with this command: `openssl s_client -connect localhost:{port}` with each scanned port.
 - Only port: 31790 give back the private ssh key
 #### Password for next level: xLYVMN9WE5zQ5vHacb0sZEVqbrp7nBTn (After login in Level 17 - Level 18 and read the password)
 
