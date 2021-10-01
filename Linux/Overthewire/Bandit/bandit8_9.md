@@ -3,7 +3,7 @@
 The password for the next level is stored in the file data.txt and is the only line of text that occurs only once<br>
 - **Commands you may need to solve this level:**<br>
 grep, sort, uniq, strings, base64, tr, tar, gzip, bzip2, xxd<br>
-- **Helpful Reading Material:**
+- **Helpful Reading Material:** <br>
 [Piping and Redirection](https://ryanstutorials.net/linuxtutorial/piping.php)
 - **Login SSH:**<br>
 User: bandit8<br>
