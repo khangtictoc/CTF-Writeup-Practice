@@ -11,8 +11,8 @@ ssh, telnet, nc, openssl, s_client, nmap<br>
 [Ports](https://computer.howstuffworks.com/web-server8.htm)<br>
 [Port (computer networking) on Wikipedia]([https://en.wikipedia.org/wiki/Port_(computer_networking))<br>                                                        
 - **Login SSH:**<br>
-User: bandit13<br>
-Pass: 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL<br>
+User: bandit14<br>
+Pass: 4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e<br>
 ## Write-up: 📝<br>
 In this chall, we have to connect to port 30000 on localhost and we have to send a string containing the current password. <br>
 Use `man nc` for more details
