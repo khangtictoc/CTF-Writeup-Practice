@@ -11,7 +11,7 @@ Pass: UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK<br>
 In this chall, we need to list all the file (include hidden file) in the current location <br>
 Use `man ls` and `man cd` for more details
 ### Solution:<br>
-- List all hidden file<br>: `ls -a`<br>
+- List all hidden file `ls -a`<br>
 - Get into **"inhere"** directory: `cd inhere`
 - List all hidden file: `ls -a`<br>
 - Cat **".hidden"** file: `cat .hidden`
