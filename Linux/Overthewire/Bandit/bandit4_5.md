@@ -5,19 +5,20 @@ The password for the next level is stored in the only human-readable file in the
 ls, cd, cat, file, du, find<br>
 ssh<br>
 - **Login SSH:**<br>
-User: bandit3<br>
+User: bandit4<br>
 Pass: pIwrPrtPN36QITSp3EQaw936yaFoFgAB<br>
 ## Write-up: 📝<br>
-In this chall, we need to list all the file (include hidden file) in the current location <br>
-Use `man ls` and `man cd` for more details
+In this chall, we need to find the **human-readable** file in **inhere** dir<br>
+Use `man file` for more details
 ### Solution:<br>
 - List all hidden file<br>
 Command: `ls -a`<br>
 - Get into **"inhere"** directory
 Command: `cd inhere`
-- List all hidden file<br>
-Command: `ls -a`<br>
-- Cat **".hidden"** file
-Command: `cat .hidden`
-
-#### Password for next level: CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
+- Find the **human-readable** file
+Command: `file ./*`
+File with "ASCII text" is the right one.
+"./*" : means all the files in the current Dir
+- Read that file
+Command: `cat ./-file07 `
+#### Password for next level: koReBOKuIDDepwhWk7jZC0RTdopnAYKh
