@@ -11,4 +11,5 @@ In this chall, we need to manipulate the data in data.txt file<br>
 Use `man grep` for more details
 ### Solution:<br>
 Command: `cat data.txt | grep millionth`<br>
+"(command A)| (command B)" : pipeline operator - send the output of command A to command B 
 #### Password for next level: cvX2JJa4CFALtqS87jk27qwqGhBM9plV
