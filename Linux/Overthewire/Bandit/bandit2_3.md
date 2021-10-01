@@ -10,7 +10,7 @@ ssh<br>
 User: bandit2<br>
 Pass: CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9<br>
 ## Write-up: 📝<br>
-In this chall, we need to read a filename contain "space". Normally, when we use command (for example: cat) with " " in file name, they will split into 2 file , seperated by that space. So in this case, we have a special syntax to tell that this is one file with space contained<br>
+In this chall, we need to read a filename contain "space". Normally, when we use command (for example: cat) with " " in file name, they will split into 2 file , seperated by that space. So in this case, we have a special syntax to tell that this is one file with spaces contained<br>
 Syntax: `cat '{file name with space}' `<br>
 Alternative:<br>
 `cat "{file name with space}" `<br>
