@@ -10,7 +10,7 @@ ls, cd, cat, file, du, find<br>
 User: bandit6<br>
 Pass: DXjZPULLxYr17uwoI01bNLQbtFemEgo7<br>
 ## Write-up: 📝<br>
-In this chall, we need to find the file which meets the given requirement in **inhere** Dir<br>
+In this chall, we need to find the file which meets the given requirement in entire systems <br>
 Use `man find` for more details
 ### Solution:<br>
 - Find the file: `find /  -group bandit6 -user bandit7 -size 33c`<br>
