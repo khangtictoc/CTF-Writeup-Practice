@@ -2,7 +2,7 @@
 - **Level Goal:**:<br>
 The password for the next level is stored in a file called - located in the home directory<br>
 - **Commands you may need to solve this level:**<br>
-ssh<br>
+ls, cd, cat, file, du, find<br>
 - **Helpful Reading Material:**<br>
 [Google Search for “dashed filename”](https://www.google.com/search?q=dashed+filename)<br>
 [Advanced Bash-scripting Guide - Chapter 3 - Special Characters](https://tldp.org/LDP/abs/html/special-chars.html)<br>
