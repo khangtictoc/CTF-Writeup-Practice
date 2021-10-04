@@ -15,7 +15,7 @@ Again, we know we need to read **bash script** in the path **/usr/bin/cronjob_ba
 ![image](https://user-images.githubusercontent.com/48288606/135879735-c450ef4c-7bbf-4f64-bb97-59c94cdbdfa9.png)
 - Well, with bash script, the best way to handle it is using **DEBUG** each line and watch the result.<br>
 - First, we copy and paste the first command: `myname=$(whoami)` then we print its value: `echo $myname`. We get **bandit22**. But in this chall, we need to reassign that value to "bandit23" for next level<br>
-![image](https://user-images.githubusercontent.com/48288606/135881825-f3860352-dde7-4a27-98ae-62570a7edc38.png)
+![image](https://user-images.githubusercontent.com/48288606/135883301-b840d384-099b-45a7-8b64-b6c92e92758d.png)
 - Then, we copy and paste the second command. `mytarget=$(echo I am user $myname | md5sum | cut -d ' ' -f 1)`. Examine the final value: **$mytarget**'s value:`echo $mytarget`. <br>
 ![image](https://user-images.githubusercontent.com/48288606/135882068-00dcd8fe-f8e1-4e1a-a9bd-7458de1575f5.png)
 - Finally, we just read the fullpath file: `cat /tmp/8ca319486bfbbc3663ea0fbe81326349`
