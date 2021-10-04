@@ -10,7 +10,7 @@ ssh, nc, cat, bash, screen, tmux, Unix ‘job control’ (bg, fg, jobs, &, CTRL-
 User: bandit20<br>
 Pass: GbKksEFF4yrVs6il55v6gwY5aVje5f0j<br>
 ## Write-up: 📝<br>
-In this chall, we have a different **Set<br>
+In this chall, we have a different **Setuid binary** file.<br>
 Use `man diff` for more details
 ### Solution:<br>
 - Compare 2 files: `diff password.new passwords.old`<br>
