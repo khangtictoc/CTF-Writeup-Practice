@@ -11,8 +11,11 @@ Pass: kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd<br>
 In this chall, we are kicked out when we login by "ssh". We can solve this chall by force another type of terminal to be allocated<br>
 Use `man ssh` for more details
 ### Solution:<br>
-- We **ssh** and use special flag: `ssh -t bandit.labs.overthewire.org -l bandit18 -p 2220 /bin/sh`<br>
--t : Force the pseudo-terminal allocation. Here, i use the special t
-#### Password for next level: kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd 
+- We **ssh** and use special flag "-t" to **force the pseudo-terminal allocation(PTY)**: `ssh -t bandit.labs.overthewire.org -l bandit18 -p 2220 /bin/sh`<br>
+Here, i use the "TTY" terminal, its path is **/bin/sh**<br>
+- Then `cat` **readme** file
+### Other solution:<br>
+We can use "-T" flag to disable the PTY allocation and communicate with shell, then the rest is similar. 
+#### Password for next level: IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x 
 
 
