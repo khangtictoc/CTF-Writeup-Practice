@@ -1,11 +1,12 @@
 # Level 22 - Level 23 ✔
 - **Level Goal:**:<br>
 A program is running automatically at regular intervals from cron, the time-based job scheduler. Look in /etc/cron.d/ for the configuration and see what command is being executed.<br>
+**NOTE:** Looking at shell scripts written by other people is a very useful skill. The script for this level is intentionally made easy to read. If you are having problems understanding what it does, try executing it to see the debug information it prints.<br>
 - **Commands you may need to solve this level:**<br>
 cron, crontab, crontab(5) (use “man 5 crontab” to access this)<br>                                        
 - **Login SSH:**<br>
-User: bandit21<br>
-Pass: gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr<br>
+User: bandit22<br>
+Pass: Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI<br>
 ## Write-up: 📝<br>
 In this chall, we have to read the content of the **cron** file to understand more about it.<br>
 ### Solution:<br>
