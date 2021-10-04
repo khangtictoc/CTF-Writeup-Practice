@@ -11,7 +11,7 @@ In this chall, we have to read the content of the **cron** file to understand mo
 ### Solution:<br>
 - We take a look in cron workng path **/etc/cron.d/** and read the file for the bandit22
 - Then, in the output, we know that system do something regularly with **/usr/bin/cronjob_bandit23.sh**. Try "Cat(ing)" it
-![image](https://user-images.githubusercontent.com/48288606/135829002-32763a45-64b8-4fa1-bf71-c455506880ef.png)
+![image](https://user-images.githubusercontent.com/48288606/135829483-79677fd2-b686-4b7f-8c96-ef2cf456c673.png)
 - Now we see, they're doing the `chmod` command with **/tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv** file, then copy the password of bandit22 from **/etc/bandit_pass/bandit22** to there.
 - So we just need to read the content in **/tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv**
 #### Password for next level: Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI 
