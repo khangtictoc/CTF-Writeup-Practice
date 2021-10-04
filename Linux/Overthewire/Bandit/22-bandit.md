@@ -8,14 +8,18 @@ cron, crontab, crontab(5) (use “man 5 crontab” to access this)<br>
 User: bandit22<br>
 Pass: Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI<br>
 ## Write-up: 📝<br>
-In this chall, we have to read the content of the **cron** file to understand more about it.<br>
+Like previous chall, we have to know what **cron** file do to understand more about it: `cat  /etc/cron.d/cronjob_bandit23`<br>
+![image](https://user-images.githubusercontent.com/48288606/135879410-941c6a4a-7c79-4cac-ba3b-66ee5db3f4d5.png)
+Again, we know we need to read **bash script** in the path **/usr/bin/cronjob_bandit23.sh**. But in this level, its difficult has been enhanced. We should find out the unfolded path of **/tmp/$mytarget**, which means we have to define **mytarget** variable<br>
 ### Solution:<br>
-- We take a look in cron workng path **/etc/cron.d/** and read the file for the bandit22
-- Then, in the output, we know that system do something regularly with **/usr/bin/cronjob_bandit23.sh**. Try "Cat(ing)" it
-![image](https://user-images.githubusercontent.com/48288606/135829483-79677fd2-b686-4b7f-8c96-ef2cf456c673.png)
-- Now we see, they're doing the `chmod` command with **/tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv** file, then copy the password of bandit22 from **/etc/bandit_pass/bandit22** to there.
-- So we just need to read the content in **/tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv**
-#### Password for next level: Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI 
+![image](https://user-images.githubusercontent.com/48288606/135879735-c450ef4c-7bbf-4f64-bb97-59c94cdbdfa9.png)
+- Well, with bash script, the best way to handle it is using **DEBUG** each line and watch the result.<br>
+- First, we copy and paste the first command: `myname=$(whoami)` then we print its value: `echo $myname`. We get **bandit22**. But in this chall, we need to reassign that value to "bandit23" for next level<br>
+![image](https://user-images.githubusercontent.com/48288606/135881825-f3860352-dde7-4a27-98ae-62570a7edc38.png)
+- Then, we copy and paste the second command. `mytarget=$(echo I am user $myname | md5sum | cut -d ' ' -f 1)`. Examine the final value: **$mytarget**'s value:`echo $mytarget`. <br>
+![image](https://user-images.githubusercontent.com/48288606/135882068-00dcd8fe-f8e1-4e1a-a9bd-7458de1575f5.png)
+- Finally, we just read the fullpath file: `cat /tmp/8ca319486bfbbc3663ea0fbe81326349`
+#### Password for next level: jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n 
 
 
 
