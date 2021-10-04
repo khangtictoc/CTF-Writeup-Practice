@@ -17,7 +17,7 @@ As we can see, that files act exactly like what the challenge describes above.<b
 So in this challenge, we have to create 2 sessions: A listening terminal used to open the port and put the current password in there; and a terminal that we'll use this **suconnect** file to connect to that port to check the password<br>
 ### Solution:<br>
 - First, we create two terminal. We can use the short cut `Ctrl + Alt + T`. Then, connect both to challenge by **ssh** like normal.<br> 
-- Second, we gonna let a arbitary terminal assume listening task and send the **{current password}** into local host and optional **{port}** (here i choose "4444"): `echo "GbKksEFF4yrVs6il55v6gwY5aVje5f0j" |nc -l localhost -p 4444`<br>
+- Second, we gonna let a arbitary terminal assume listening task and send the **{current password}** into local host and optional **{port}** (here i choose "4444", remember not to choose special port): `echo "GbKksEFF4yrVs6il55v6gwY5aVje5f0j" |nc -l localhost -p 4444`<br>
 - Finally, the other port responsible for connecting task by using: `./suconnect 4444` <br>
 The password for next chall display in listening terminal
 #### Password for next level: gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr 
