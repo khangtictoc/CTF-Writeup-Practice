@@ -1,7 +1,7 @@
 # Level 19 - Level 20 ✔
 - **Level Goal:**:<br>
 To gain access to the next level, you should use the setuid binary in the homedirectory. Execute it without arguments to find out how to use it. The password for this level can be found in the usual place (/etc/bandit_pass), after you have used the setuid binary.<br>
-NOTE: if you have solved this level and see ‘Byebye!’ when trying to log into bandit18, this is related to the next level, bandit19<br>
+**NOTE:** if you have solved this level and see ‘Byebye!’ when trying to log into bandit18, this is related to the next level, bandit19<br>
 - **Helpful Reading Material**<br>
 [setuid on Wikipedia](https://en.wikipedia.org/wiki/Setuid)<br>                                   
 - **Login SSH:**<br>
