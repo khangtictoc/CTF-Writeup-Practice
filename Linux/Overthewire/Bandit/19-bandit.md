@@ -12,7 +12,7 @@ Setuid binary files specify the permission(read, write, execute) of some kind of
 ### Solution:<br>
 - Execute the file as challenge suggested : `./bandit20-do` <br>
 Result: <br>
-`Run a command as another user.
+`Run a command as another user.<br>
   Example: ./bandit20-do id`
 - So as a hint, then just combine with `cat` command to read the password: `./bandit20-do cat /etc/bandit_pass/bandit20`<br>
 #### Password for next level: GbKksEFF4yrVs6il55v6gwY5aVje5f0j 
