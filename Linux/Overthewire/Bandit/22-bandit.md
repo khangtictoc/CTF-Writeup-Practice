@@ -10,10 +10,11 @@ Pass: Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI<br>
 ## Write-up: 📝<br>
 Like previous chall, we have to know what **cron** file do to understand more about it: `cat  /etc/cron.d/cronjob_bandit23`<br>
 ![image](https://user-images.githubusercontent.com/48288606/135883049-56cee474-c244-49d5-be66-559b3c15f2d2.png)<br>
-Again, we know we need to read **bash script** in the path **/usr/bin/cronjob_bandit23.sh**. But in this level, its difficult has been enhanced. We should find out the unfolded path of **/tmp/$mytarget**, which means we have to define **mytarget** variable<br>
+Again, we know we need to read **bash script** in the path **/usr/bin/cronjob_bandit23.sh**.<br>
 ### Solution:<br>
 Cron content:<br>
 ![image](https://user-images.githubusercontent.com/48288606/135879735-c450ef4c-7bbf-4f64-bb97-59c94cdbdfa9.png)
+In this level, its difficult has been enhanced. We should find out the unfolded path of **/tmp/$mytarget**, which means we have to define **mytarget** variable<br>
 - Well, with bash script, the best way to handle it is using **DEBUG** each line and watch the result.<br>
 - First, we copy and paste the first command: `myname=$(whoami)` then we print its value: `echo $myname`. We get **bandit22**. But in this chall, we need to reassign that value to "bandit23" for next level<br>
 ![image](https://user-images.githubusercontent.com/48288606/135883301-b840d384-099b-45a7-8b64-b6c92e92758d.png)
