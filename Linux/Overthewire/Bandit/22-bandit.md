@@ -16,7 +16,7 @@ Cron content:<br>
 ![image](https://user-images.githubusercontent.com/48288606/135879735-c450ef4c-7bbf-4f64-bb97-59c94cdbdfa9.png)
 In this level, its difficult has been enhanced. We should find out the unfolded path of **/tmp/$mytarget**, which means we have to define **mytarget** variable<br>
 - Well, with bash script, the best way to handle it is using **DEBUG** each line and watch the result.<br>
-- First, we copy and paste the first command: `myname=$(whoami)` then we print its value: `echo $myname`. We get **bandit22**. But in this chall, we need to reassign that value to "bandit23" for next level<br>
+- First, we copy and paste the first command: `myname=$(whoami)` then we print its value: `echo $myname`. We get **bandit22**. But in this chall, we need to assign that value to "bandit23" for next level<br>
 ![image](https://user-images.githubusercontent.com/48288606/135883301-b840d384-099b-45a7-8b64-b6c92e92758d.png)
 - Then, we copy and paste the second command. `mytarget=$(echo I am user $myname | md5sum | cut -d ' ' -f 1)`. Examine the final value: **$mytarget**'s value:`echo $mytarget`. <br>
 ![image](https://user-images.githubusercontent.com/48288606/135883413-db830b50-a08d-47b6-8a26-74f4e61adb8d.png)
