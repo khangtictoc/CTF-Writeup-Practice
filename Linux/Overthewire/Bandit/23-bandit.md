@@ -41,4 +41,5 @@ In this chall, we have to think a little bit to solve. The easiest way I can com
 `cp solve.sh /var/spool/bandit24`<br>
 - Wait at most 60 seconds for the cron do its work.<br>
 - Check the passwd.txt <br>
+✌: According to the chall said, I should be proud of myself. And I did !!! 😎
 #### Password for next level: UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ 
