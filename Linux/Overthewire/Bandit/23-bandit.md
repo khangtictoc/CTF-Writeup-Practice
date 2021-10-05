@@ -15,7 +15,28 @@ And then "cat" the relevant file:<br>
 ### Solution:<br>
 Look carefully at the content above. This is what the "shell script" do:
 1. Move to the path **/var/spool/$myname** , which the current user **whoami** 's assigned to $myname.
-2. Do a "for" loop in the files with and without extension **\* .\*** 
+2. Do a "for" loop in the files with and without extension (**\* .\***).
+3. **if [ "$i" != "." -a "$i" != ".." ];** 
+With each loop, it'll consider the special case whether that files is "." or ".." , it'll skip
+
 #### Password for next level: BfMYroe26WYalil77FoDi9qh59eK5xNr 
 
 
+#!/bin/bash
+
+myname=$(whoami)
+
+cd /var/spool/$myname
+echo "Executing and deleting all scripts in /var/spool/$myname:"
+for i in * .*;
+do
+    if [ "$i" != "." -a "$i" != ".." ];
+    then
+        echo "Handling $i"
+        owner="$(stat --format "%U" ./$i)"
+        if [ "${owner}" = "bandit23" ]; then
+            timeout -s 9 60 ./$i
+        fi
+        rm -f ./$i
+    fi
+done
