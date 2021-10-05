@@ -11,8 +11,8 @@ Pass: jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n<br>
 ## Write-up: 📝<br>
 In this chall, we have to connect to port 30000 on localhost and we have to send a string containing the current password. <br>
 Like many previous chall again, with this **"cron"**, we have to know what **cron** file do to understand more about it: `cat  /etc/cron.d/cronjob_bandit24`<br>
-![image](https://user-images.githubusercontent.com/48288606/135883049-56cee474-c244-49d5-be66-559b3c15f2d2.png)<br>
-path of **/tmp/$mytarget**, which means we have to define **mytarget** variable<br>
+And then "cat" the relevant file:<br>
+![image](https://user-images.githubusercontent.com/48288606/135885637-8b218ded-bbbe-42b9-987b-383d4e65ef6d.png)<br>
 ### Solution:<br>
 Cron content:<br>
 ![image](https://user-images.githubusercontent.com/48288606/135879735-c450ef4c-7bbf-4f64-bb97-59c94cdbdfa9.png)
