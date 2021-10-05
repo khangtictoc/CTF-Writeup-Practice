@@ -13,9 +13,9 @@ Like many previous chall again, with this **"cron"**, we have to know what **cro
 And then "cat" the relevant file:<br>
 ![image](https://user-images.githubusercontent.com/48288606/135885637-8b218ded-bbbe-42b9-987b-383d4e65ef6d.png)<br>
 ### Solution:<br>
-Cron content:<br>
-![image](https://user-images.githubusercontent.com/48288606/135879735-c450ef4c-7bbf-4f64-bb97-59c94cdbdfa9.png)
--
+Look carefully at the content above. This is what the "shell script" do:
+1. Move to the path **/var/spool/$myname** , which the current user **whoami** 's assigned to $myname.
+2. Do a "for" loop in the files with and without extension **\* .\*** 
 #### Password for next level: BfMYroe26WYalil77FoDi9qh59eK5xNr 
 
 
