@@ -1,6 +1,6 @@
-# Level 24 - Level 25 ✔
+# Level 25 - Level 26 ✔
 - **Level Goal:**:<br>
-A daemon is listening on port 30002 and will give you the password for bandit25 if given the password for bandit24 and a secret numeric 4-digit pincode. There is no way to retrieve the pincode except by going through all of the 10000 combinations, called brute-forcing.<br>                                            
+Logging in to bandit26 from bandit25 should be fairly easy… The shell for user bandit26 is not /bin/bash, but something else. Find out what it is, how it works and how to break out of it.<br>                                            
 - **Login SSH:**<br>
 User: bandit24<br>
 Pass: UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ<br>
