@@ -25,7 +25,8 @@ The solution for this is in the `more` command.<br>
 ![image](https://user-images.githubusercontent.com/48288606/136666710-bbd61c09-f9c6-4d07-b220-b0dc62c75840.png)<br>
 - After that, we will use vim to read the password file from here. Why **"Vim"**? 'Cause it give a possibility to execute basic command when move to **command mode** to help us read the password in bandit26. Open vim: `vi`<br>
 - Once get into vim workplace, make sure enter **command mode** by pressing **"Escape"** button. Then type: `:e /etc/bandit_pass/bandit26`. (:e means that the file that you're editing has been written to by another program.)<br>
-Note: You can explore the official document about vim [here](https://vimhelp.org/cmdline.txt.html#Command-line) or [this](https://web.stanford.edu/class/archive/cs/cs107/cs107.1218/resources/vim.html) for more easily understanding and quick use. <br>
+Note 1: You can explore the official document about vim [here](https://vimhelp.org/cmdline.txt.html#Command-line) or [this](https://web.stanford.edu/class/archive/cs/cs107/cs107.1218/resources/vim.html) for more easily understanding and quick use. <br>
+Note 2: You can't use the trick from Level 18-19 because this is non standard shell.<br>
 - Enjoy the password !!!<br>
 ![image](https://user-images.githubusercontent.com/48288606/136666032-c4fac803-0d15-4ffe-9315-75d58586bd4c.png)<br>
 
