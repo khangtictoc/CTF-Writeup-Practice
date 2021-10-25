@@ -15,12 +15,15 @@ We know this place is Gia Lai. With the hint of the song above. We try searching
 <img src=https://user-images.githubusercontent.com/48288606/138621035-919f5fd4-e8ae-4e03-9ea4-daeab0573c09.png>
  </p>
 Go into this video. Find the description. <br>
+
 ```
 Music : Đôi Mắt Pleiku - Kasim Hoàng Vũ
 drone : mavic 2 zoom
 ```
+
 The song is "Đôi Mắt Pleiku", suit the title "Eyes". Then we just need to find the correct words in the blank of the lyrics in the suggested hint<br>
 Search in youtube "doi mat pleiku lyric"<br>
+
 ```
 Lời Bài Hát:
 Em đẹp thế Pleiku ơi 
