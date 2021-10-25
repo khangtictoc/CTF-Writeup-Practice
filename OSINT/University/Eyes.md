@@ -2,12 +2,18 @@
 - **Point: 50**:<br>
 - **Description:**<br>
 Sing with me: You are very beautiful.... format flag: flag{name-of-this-place}<br>
-<img align="center" src=https://user-images.githubusercontent.com/48288606/138620521-7e29fd8d-2ff5-4b8d-b76b-25f537b90ed4.jpg>
+<p align="center">
+<img src=https://user-images.githubusercontent.com/48288606/138620521-7e29fd8d-2ff5-4b8d-b76b-25f537b90ed4.jpg>
+ </p>
 ## Solution:<br>
 Yandex is one of the most powerful search engine in images. Search the image with yandex. Resutl:
-![Gia_Lai](https://user-images.githubusercontent.com/48288606/138620863-eced5731-2b35-4d0f-8ef7-3b30e87526b6.png)<br>
+<p align="center">
+<img src=https://user-images.githubusercontent.com/48288606/138620863-eced5731-2b35-4d0f-8ef7-3b30e87526b6.png>
+ </p>
 We know this place is Gia Lai. With the hint of the song above. We try searching youtube with the lyrics "gia lai em đẹp lắm". 
-![image](https://user-images.githubusercontent.com/48288606/138621035-919f5fd4-e8ae-4e03-9ea4-daeab0573c09.png)<br>
+<p align="center">
+<img src=https://user-images.githubusercontent.com/48288606/138621035-919f5fd4-e8ae-4e03-9ea4-daeab0573c09.png>
+ </p>
 Go into this video. Find the description. <br>
 ```
 Music : Đôi Mắt Pleiku - Kasim Hoàng Vũ
