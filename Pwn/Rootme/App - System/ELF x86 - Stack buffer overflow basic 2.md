@@ -41,7 +41,7 @@ void main()
 }
 ```
 ## Write-up:
-- As a normal code flow, the program will point to the address of **sup()** function and execute it. So we need to override the "ret addr" and point it to **shell()** function. - Using gdb and disassembler the **main()** function:
+- As a normal code flow, the program will point to the address of **sup()** function and execute it. So we need to override the "ret addr" and point it to **shell()** function. - Using gdb and disassembler the **main()** function:<br>
 ![image](https://user-images.githubusercontent.com/48288606/141277701-1e1e1c08-997a-47ba-be6a-1129505aee79.png)
  
 - Poke around and find the **shell()**'s address at **0x08048516**:<br>
