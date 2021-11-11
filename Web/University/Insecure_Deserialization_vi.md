@@ -1,4 +1,4 @@
-# Nhóm bài tập CTF ✔
+# Nhóm bài tập CTF ✌
 - **Insecure Deserialization**:<br>
 - **Note:** Bài tập CTF của môn Lập trình an toàn và khai thác lổ hổng phần mềm<br>
 - **Team:** Blackberries<br>
