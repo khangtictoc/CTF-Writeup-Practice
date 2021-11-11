@@ -1,4 +1,4 @@
-# Eyes ✔
+# Eyes ✍
 - **Point: 50**:<br>
 - **Note**: CTF challenge from Web Security Subject<br>
 - **Team**: Blackberries<br>
