@@ -1,4 +1,4 @@
-# CTF Challenge with Group ✔
+# CTF Challenge with Group ✌
 - **Insecure Deserialization**:<br>
 - **Note:** CTF Challenge in Secure Programming and Exploiting Vulnerabilities subject<br>
 - **Team:** Blackberries<br>
