@@ -1,18 +1,8 @@
 # ELF x86 - Stack buffer overflow basic 1
 - Point: 5pts
 - Author: [Lyes](https://www.root-me.org/Lyes?lang=en),  25 March 2015
-- Level: Very Easy
-- Statement
-- Environment configuration <br>
-```
-  PIE	    Position Independent Executable	 ✘ 
-  RelRO	    Read Only relocations	         ✘ 
-  NX	    Non-Executable Stack	         ✘ 
-  Heap exec Non-Executable Heap	                 ✘ 
-  ASLR	    Address Space Layout Randomization	 ✘ 
-  SF	    Source Fortification	         ✘ 
-  SRC	    Source code access	                 ✔ 
-```
+- Level: Very Easy <br><br>
+![image](https://user-images.githubusercontent.com/48288606/141502028-c005e26c-0784-400c-a79d-14c12a79e000.png)
 ## Write-up:
 This challenge does not require to use **GDB**. Look at the code:
 ```
