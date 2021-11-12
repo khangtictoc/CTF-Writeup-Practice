@@ -1,18 +1,8 @@
 # ELF x86 - Format string bug basic 1
 - Point: 15pts
 - Author: [Lu33Y](https://www.root-me.org/Lu33Y?lang=en),  8 February 2012
-- Level: Very Easy
-- Statement
-- Environment configuration <br>
-```
-  PIE	    Position Independent Executable	 ✘ 
-  RelRO	    Read Only relocations	         ✘ 
-  NX	    Non-Executable Stack	         ✘ 
-  Heap exec Non-Executable Heap	                 ✘ 
-  ASLR	    Address Space Layout Randomization	 ✘ 
-  SF	    Source Fortification	         ✘ 
-  SRC	    Source code access	                 ✔ 
-```
+- Level: Easy<br><br>
+![image](https://user-images.githubusercontent.com/48288606/141501790-9851fa6d-9b74-44b1-9960-74e627795010.png)
 ## Write-up:
 
 ```
