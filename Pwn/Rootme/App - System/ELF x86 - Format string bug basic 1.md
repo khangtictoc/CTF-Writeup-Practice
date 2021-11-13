@@ -29,7 +29,7 @@ The vulnerability in `printf(argv[1]);`, it execute without **Format specifier".
 ```
 - Convert to ASCII text ([HextoText](https://www.rapidtables.com/convert/number/hex-to-ascii.html)):<br><br>
 ![image](https://user-images.githubusercontent.com/48288606/141614663-d2edc72c-3b5f-4267-9ec4-aefeb2fcfeb7.png)<br><br>
-As illustrated, a part of string above contains the real password; therefore, we just write these bytes into "big endian" format and convert again to hex.
+As illustrated, a part of string above contains the real password; therefore, we just write these bytes into "big endian" [Script here]() format and convert again to hex.<br>
 Pass: Dpa9d6)(Epamd
 
 
