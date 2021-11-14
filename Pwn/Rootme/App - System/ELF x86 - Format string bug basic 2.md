@@ -49,8 +49,8 @@ Our aim is overwriting the **check**'s value. We leverage a vulnerability in
 with no format specifier. Examine the stack and find a way to change that value.
 
 ### Solution:
-Let's try looking into the stack by usual payload
-`./ch14 $(python -c "print 'AAAA' + '%x'")`
+Let's try looking into the stack by usual payload<br>
+`./ch14 $(python -c "print 'AAAA' + '%x'")`<br>
 Output:
 ```
 ```
