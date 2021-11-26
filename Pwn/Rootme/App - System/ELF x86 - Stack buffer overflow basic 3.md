@@ -68,7 +68,7 @@ void shell(void)
 }
 ```
 We analyze the code, the variable **i** get 1 bytes of "stdin" and execute the below section, we only finish this challenge when we change the value of **check** to **0xbffffabc**<br>
-The vulnerable is in the size of **buffer**. But **buffer** is declared before **check** and therefore **check** 's value can't be altered through upper overflow. 
+The vulnerable is in the size of **buffer**. But **buffer** is declared before **check** and therefore **check** 's value can't be altered through upper overflow. <br>
 ![image](https://user-images.githubusercontent.com/48288606/143523511-fe54d69c-7f2b-4320-a4ba-667ce2f90df4.png)<br>
 
 ### Solution:
