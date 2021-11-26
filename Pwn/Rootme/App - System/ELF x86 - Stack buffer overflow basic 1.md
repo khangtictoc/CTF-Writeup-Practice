@@ -4,7 +4,7 @@
 - Level: Very Easy <br><br>
 ![image](https://user-images.githubusercontent.com/48288606/141502028-c005e26c-0784-400c-a79d-14c12a79e000.png)
 ## Write-up:
-This challenge does not require to use **GDB**. Look at the code:
+This challenge is not required to use **GDB**. Look at the code:
 ```
 #include <unistd.h>
 #include <sys/types.h>
