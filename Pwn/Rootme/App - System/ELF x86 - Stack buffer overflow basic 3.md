@@ -67,8 +67,19 @@ void shell(void)
   system("/bin/bash");
 }
 ```
+We analyze the code, the variable **i** get 1 bytes of "stdin" and execute the below section, we only finish this challenge when we change the value of **check** to **0xbffffabc**<br>
+The vulnerable is in the size of **buffer**. But **buffer** is declared before **check** and therefore **check** 's value can't be altered through upper overflow. 
+![image](https://user-images.githubusercontent.com/48288606/143523511-fe54d69c-7f2b-4320-a4ba-667ce2f90df4.png)<br>
 
 ### Solution:
-`(python -c "print('\x08'*4+'\xbc\xfa\xff\xbf')";cat) | ./ch16`
+It's possible to make a change in **check** by lower overflow in **buffer** array. It's mean overwriting `buffer[-1]`, `buffer[-2]`,`buffer[-3]` and `buffer[-4]` revalues **check**.
+With the program provided, we have 2 main functions:
+- Make count increase or decrease by 1 (and print something that we don't care)
+- Set **buffer** with **i** 's value
+So just enter **i** with **0x08** 4 times and assign the desired value **0xbffffabc** in little endian format.
+
+Payload: `(python -c "print('\x08'*4+'\xbc\xfa\xff\xbf')";cat) | ./ch16`
+
+Password: Sm4shM3ify0uC4n
 
 
