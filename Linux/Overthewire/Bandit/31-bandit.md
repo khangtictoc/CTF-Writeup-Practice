@@ -8,7 +8,7 @@ git<br>
 User: bandit31<br>
 Pass: 47e603bb428404d265f59c42920d81e5<br>
 ## Write-up: 📝<br>
-This level teach us about using git to view commit log.
+This level teach us about pushing a file to remote repo.
 
 ### Solution:<br>
 - Make a dir in **/tmp/{your_dir}**, then move to that path.<br>
