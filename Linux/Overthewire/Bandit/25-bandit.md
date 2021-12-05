@@ -9,7 +9,9 @@ Pass: uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG<br>
 ## Write-up: 📝<br>
 In this chall, we log into the chall and find a ssh private key to the next level. But the interesting issue here is when ssh to **bandit26**, the system is closed. <br>
 ![image](https://user-images.githubusercontent.com/48288606/136666207-c15e8bd5-647c-4815-b798-f4bbaa9c9d6e.png)<br>
-The description also gave clues about seeing the current **bandit26** user 's shell, we can reach this by read the **/etc/passwd** file: `cat /etc/passwd | grep bandit26`<br>
+The description also gave clues about seeing the current **bandit26** user 's shell, we can reach this by read the **/etc/passwd** file: `cat /etc/passwd | grep bandit26`<br><br>
+![image](https://user-images.githubusercontent.com/48288606/144730318-eb4e0ce5-7205-4aa2-99de-f322f1eccf49.png)
+
 Then we take a look into the **/usr/bin/showtext** and see what inside it: <br>
 ![image](https://user-images.githubusercontent.com/48288606/136666316-6bd6d637-143e-427a-a3a2-98d9d914d103.png)<br>
 This is a bash script which do the followings:<br>
