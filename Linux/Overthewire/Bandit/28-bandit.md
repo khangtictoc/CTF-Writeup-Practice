@@ -23,7 +23,7 @@ Command: `git clone ssh://bandit28-git@localhost/home/bandit28-git/repo`<br><br>
 Note: The syntax is `git show {hash}`. <br><br>
 ![image](https://user-images.githubusercontent.com/48288606/144731438-570c6d47-d9ec-4435-a24b-0bb35ead1ccf.png)
 
-#### Password for next level: 0ef186ac70e04ea33b4c1853d2526fa2 
+#### Password for next level: bbc96594b4e001778eee9975372716b2 
 
 
 
