@@ -8,7 +8,7 @@ git<br>
 User: bandit30<br>
 Pass: 5b90576bedb2cc04c86a9e924ce42faf<br>
 ## Write-up: 📝<br>
-This level teach us about using git to view commit log.
+This level teach us about using git to view all references.
 
 ### Solution:<br>
 - Make a dir in **/tmp/{your_dir}**, then move to that path.<br>
