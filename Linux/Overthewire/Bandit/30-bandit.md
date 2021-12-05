@@ -1,12 +1,12 @@
-# Level 31 - Level 32 ✔
+# Level 30 - Level 31 ✔
 - **Level Goal:**:<br>
-There is a git repository at ssh://bandit31-git@localhost/home/bandit31-git/repo. The password for the user bandit28-git is the same as for the user bandit28.<br> 
+There is a git repository at ssh://bandit30-git@localhost/home/bandit30-git/repo. The password for the user bandit30-git is the same as for the user bandit30.<br> 
 Clone the repository and find the password for the next level.<br>
 - **Commands you may need to solve this level:**<br>
 git<br>
 - **Login SSH:**<br>
-User: bandit31<br>
-Pass: 47e603bb428404d265f59c42920d81e5<br>
+User: bandit30<br>
+Pass: 5b90576bedb2cc04c86a9e924ce42faf<br>
 ## Write-up: 📝<br>
 This level teach us about using git to view commit log.
 
