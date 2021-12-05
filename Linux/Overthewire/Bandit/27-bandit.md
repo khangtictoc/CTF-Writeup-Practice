@@ -11,8 +11,8 @@ Pass: 3ba3118a22e93127a4ed485be72ef5ea<br>
 This level teach us about using git to clone a repository from github.
 
 ### Solution:<br>
-- Make a dir in **/tmp/{your_dir}**, then move to that path.
-Command: `git clone ssh://bandit27-git@localhost/home/bandit27-git/repo`<br>
+- Make a dir in **/tmp/{your_dir}**, then move to that path.<br>
+Command: `git clone ssh://bandit27-git@localhost/home/bandit27-git/repo`<br><br>
 ![image](https://user-images.githubusercontent.com/48288606/144731242-939fa7ef-a7e7-4779-8079-c973da52a483.png)
 - Use the current password for level 27 to authenticate.
 - Move to **repo** folder.
