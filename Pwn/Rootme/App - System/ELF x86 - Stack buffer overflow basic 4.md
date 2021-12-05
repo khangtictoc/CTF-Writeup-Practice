@@ -1,69 +1,72 @@
 # ELF x86 - Stack buffer overflow basic 4
-- Point: 25pts
-- Author: [Lyes](https://www.root-me.org/Lyes?lang=en),  10 April 2015
+- Point: 30pts
+- Author: [Lu33Y](https://www.root-me.org/Lu33Y?lang=en),  8 February 2012
 - Level: Medium <br><br>
-![image](https://user-images.githubusercontent.com/48288606/143521039-c69b3f39-c52e-4551-b2fa-9facc7ca23cf.png)
+- Can you return the env to me pleazzz ? <br><br>
+![image](https://user-images.githubusercontent.com/48288606/144751579-b6431726-2894-4a1e-946f-4bc797c9245c.png)
 
 ## Write-up:
 
 ```
 #include <stdio.h>
-#include <sys/time.h>
-#include <sys/types.h>
-#include <unistd.h>
 #include <stdlib.h>
+#include <dirent.h>
+#include <string.h>
  
-void shell(void);
- 
-int main()
+struct EnvInfo
 {
+  char home[128];
+  char username[128];
+  char shell[128];  
+  char path[128];  
+};
  
-  char buffer[64];
-  int check;
-  int i = 0;
-  int count = 0;
  
-  printf("Enter your name: ");
-  fflush(stdout);
-  while(1)
+struct EnvInfo GetEnv(void)
+{
+  struct EnvInfo env;
+  char *ptr;
+   
+  if((ptr = getenv("HOME")) == NULL)
     {
-      if(count >= 64)
-        printf("Oh no...Sorry !\n");
-      if(check == 0xbffffabc)
-        shell();
-      else
-        {
-            read(fileno(stdin),&i,1);
-            switch(i)
-            {
-                case '\n':
-                  printf("\a");
-                  break;
-                case 0x08:
-                  count--;
-                  printf("\b");
-                  break;
-                case 0x04:
-                  printf("\t");
-                  count++;
-                  break;
-                case 0x90:
-                  printf("\a");
-                  count++;
-                  break;
-                default:
-                  buffer[count] = i;
-                  count++;
-                  break;
-            }
-        }
+      printf("[-] Can't find HOME.\n");
+      exit(0);
     }
+  strcpy(env.home, ptr);
+  if((ptr = getenv("USERNAME")) == NULL)
+    {
+      printf("[-] Can't find USERNAME.\n");
+      exit(0);
+    }
+  strcpy(env.username, ptr);
+  if((ptr = getenv("SHELL")) == NULL)
+    {
+      printf("[-] Can't find SHELL.\n");
+      exit(0);
+    }
+  strcpy(env.shell, ptr);
+  if((ptr = getenv("PATH")) == NULL)
+    {
+      printf("[-] Can't find PATH.\n");
+      exit(0);
+    }
+  strcpy(env.path, ptr);
+  return env;
 }
  
-void shell(void)
+int main(void)
 {
-  setreuid(geteuid(), geteuid());
-  system("/bin/bash");
+  struct EnvInfo env;
+   
+  printf("[+] Getting env...\n");
+  env = GetEnv();
+   
+  printf("HOME     = %s\n", env.home);
+  printf("USERNAME = %s\n", env.username);
+  printf("SHELL    = %s\n", env.shell);
+  printf("PATH     = %s\n", env.path);
+   
+  return 0;  
 }
 ```
 
