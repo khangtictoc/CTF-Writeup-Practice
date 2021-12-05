@@ -1,6 +1,6 @@
 # Level 29 - Level 30 ✔
 - **Level Goal:**:<br>
-There is a git repository at ssh://bandit29-git@localhost/home/bandit29-git/repo. The password for the user bandit28-git is the same as for the user bandit28.<br> 
+There is a git repository at ssh://bandit29-git@localhost/home/bandit29-git/repo. The password for the user bandit29-git is the same as for the user bandit29.<br> 
 Clone the repository and find the password for the next level.<br>
 - **Commands you may need to solve this level:**<br>
 git<br>
