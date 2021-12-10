@@ -87,8 +87,8 @@ public function __destruct(){
 ### Solution:
 - Create instance  `do_nothing` with 2 parameters `123` (Optional value)  and `passthru`. 
 - Create instance`Show_color` with 2 parameters **do_nothing object** above and the command we want to execute ex. `ls`. 
-- Then **serialize** object  `Show_color`
-**Sample**:
+- Then **serialize** object  `Show_color`<br>
+**Code**:
 ```
 $a = new do_nothing(123,"passthru");
 $b = new Show_color($a,"ls");
