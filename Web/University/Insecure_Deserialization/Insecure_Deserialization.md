@@ -99,9 +99,8 @@ Output:
 `O:10:"Show_color":2:{s:5:"color";s:2:"ls";s:4:"type";O:10:"do_nothing":2:{s:3:"why";i:123;s:10:"i_use_this";s:8:"passthru";}}`
 - Send to  var `code` and send request to reload page <br>
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/48288606/138675519-6fc911d4-823a-405a-b6f8-a74da4e05dec.png">
-</p>
+![image](https://user-images.githubusercontent.com/48288606/145559744-dd709ed3-33ed-4d02-a574-9787e0eb6aa7.png)
+
 
 - There are 2 files. The command was executed successfully, we can review the logic flow as the following: Take a deep in the line `call_user_func($this->type->adu,$this->color);`. `$this->type` will become `$a`, means it will operate this `call_user_func($a->adu,$this->color);`. How about `$a->adu` was processed? Back again in `__get($method)` . And `$method` here is `adu`, this `$method` is actually do nothing, `$this->why` is set **null** to run the **block code** inside `return $this->i_use_this;` , it's equivalent to `return passthru($command)` with **$command** we have set above - `ls`.
 - Afterthat, we try read file `config.php` first. Change `ls` into `cat config.php` , serialize again and do the similar with all the step above
