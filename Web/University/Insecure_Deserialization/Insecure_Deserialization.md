@@ -64,7 +64,7 @@ else{
     highlight_file(__FILE__);
 }
 ```
-The code above will get the value of `code` in URL through `$_GET[]` and `unserialize` the variable `code` . In case `code` is **null** then show the code like being - `highlight_file(__FILE__);`.There are two another function `__construct()` và `__destruct()` and this is the good case for **insecure deserialization** with `unserialize` has no verify-input job so we can take advantage of this to exploit
+The code above will get the value of `code` in URL through `$_GET[]` and **unserialize** the variable `code` . In case `code` is **null** then show the code like being - `highlight_file(__FILE__);`.There are two another function `__construct()` và `__destruct()` and this is the good case for **insecure deserialization** with **unserialize** has no verify-input job so we can take advantage of this to exploit
 - We notice that `User` class seems strange when a line shows  `admin=false`and when `admin=true` then print `"hi admin, here is your flag"`. So we trying to serialize the `User` object.
 ```
 $a = new User('name');
@@ -87,7 +87,7 @@ public function __destruct(){
 ### Solution:
 - Create instance  `do_nothing` with 2 parameters `123` (Optional value)  and `passthru`. 
 - Create instance`Show_color` with 2 parameters **do_nothing object** above and the command we want to execute ex. `ls`. 
-- Sau đó `serialize` đối tượng  `Show_color`
+- Then **serialize** object  `Show_color`
 **Sample**:
 ```
 $a = new do_nothing(123,"passthru");
