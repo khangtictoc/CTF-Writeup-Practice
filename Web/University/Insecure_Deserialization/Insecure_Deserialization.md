@@ -1,6 +1,6 @@
 # CTF Challenge with Group ✌
 - **Insecure Deserialization**:<br>
-- **Note:** CTF Challenge in Secure Programming and Exploiting Vulnerabilities subject<br>
+- **Subject:** CTF Challenge in Secure Programming and Exploiting Vulnerabilities subject<br>
 - **Team:** Blackberries<br>
 - **Link:** http://45.122.249.68:10001/
 
