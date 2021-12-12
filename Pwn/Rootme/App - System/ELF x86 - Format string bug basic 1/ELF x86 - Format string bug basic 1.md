@@ -21,7 +21,7 @@ int main(int argc, char *argv[]){
 The code open file **.passwd** which includes the password we need, then write it into **buffer** array. <br>
 The vulnerability in `printf(argv[1]);`, it execute without **Format specifier".**So we can take advantage of this  to look into the stack to find out the password.
 ### Solution:
-- We'll "brute-force" the buffer space and examine the output value. Print the value with hex code: <br>
+- We'll "scan" the buffer space and examine the output value. Print the value with hex code: <br>
 `./ch5 $(python -c "print '%08x.'*32")`
 - Output:
 ```
