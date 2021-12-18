@@ -1,6 +1,6 @@
 # Web Gauntlet 3 ❓
 Tags: Web Exploitation<br>
-Point: 200<br>
+Point: 300<br>
 AUTHOR: MADSTACKS<br>
 Description:<br>
 Last time, I promise! Only 25 characters this time. <br>
@@ -30,6 +30,6 @@ Then move to **filter.php** file to get the flag.
 
 #### The Flag (for reference): ✔️
 ```
-picoCTF{0n3_m0r3_t1m3_fc0f841ee8e0d3e1f479f1a01a617ebb}
+picoCTF{k3ep_1t_sh0rt_30593712914d76105748604617f4006a}
 ```
 
