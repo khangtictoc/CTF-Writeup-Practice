@@ -3,7 +3,8 @@ Tags: Web Exploitation<br>
 Point: 200<br>
 AUTHOR: MADSTACKS<br>
 Description:<br>
-Can you beat the filters? Log in as admin http://jupiter.challenges.picoctf.org:54319/ <br>
+Can you beat the filters? Log in as admin<br>
+http://jupiter.challenges.picoctf.org:54319/ <br>
 http://jupiter.challenges.picoctf.org:54319/filter.php
 
 
