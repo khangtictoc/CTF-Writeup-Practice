@@ -7,6 +7,12 @@ Can you beat the filters? Log in as admin<br>
 http://jupiter.challenges.picoctf.org:54319/ <br>
 http://jupiter.challenges.picoctf.org:54319/filter.php
 
+Hints:
+- You are not allowed to login with valid credentials.
+- Write down the injections you use in case you lose your progress.
+- For some filters it may be hard to see the characters, always (always) look at the raw hex in the response.
+- sqlite
+- If your cookie keeps getting reset, try using a private browser window
 
 ## Write-up: 📝
 We have to get through all 5 SQLi challenges. One link gives the form , display query after wrong credential submission or nothing if the query statement contains filtered words.
