@@ -78,7 +78,7 @@ Pass: `123456` (arbitary string)
 
 Our query: `SELECT * FROM users WHERE username='ad'||'min'/**//*'  AND password='123'`
 
-When you done reaching to 6/5 round. Back to **filter** file and the flag is there !
+When you done reaching to 6/5 round. Back to **filter.php** file and the flag is there !
 
 #### The Flag (for reference): ✔️
 ```
