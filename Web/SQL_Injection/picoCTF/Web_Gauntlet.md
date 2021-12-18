@@ -16,7 +16,7 @@ The other links show the filtered words.
 
 Filter: `or`
 
-Login as admin so the username=admin, and query **sqli** here.
+Login as admin so the username=admin, and query **sqli** here. Use `--` to comment out
 
 User: `admin' --`
 
