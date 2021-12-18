@@ -16,8 +16,12 @@ Hints:
 
 
 ## Write-up: 📝
+Compared to first **Web Gauntlet". This challenge only have 1 round but more difficult.
 
 ## Solution: 💯
+
+Filter: `or and true false union like = > < ; -- /* */ admin`
+
 
 
 #### The Flag (for reference): ✔️
