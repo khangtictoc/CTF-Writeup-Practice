@@ -27,7 +27,7 @@ In this chall, we try to create an injection in **username** which should cover 
 
 Our payload look like this: `SELECT username, password FROM users where username='admi'||{n}`
 
-We get the `'n'` character by `CHAR()` function and specify the exact number we need in [Ascii Table](https://www.asciitable.com/) (n=110 in decimal). We take an advantage of `LENGTH()` function to control the value. And now we will calculate: The must-have string is ` AND password=` has 14 characters. We need 110 so it ought to be multiplied by 7 and add by 12. 
+We get the `'n'` character by `CHAR()` function and specify the exact number we need in [Ascii Table](https://www.asciitable.com/) ('n' is equivalent to 110 in decimal). We take an advantage of `LENGTH()` function to control the value. And now we will calculate: The must-have string is ` AND password=` has 14 characters. We need 110 so it ought to be multiplied by 7 and add by 12. 
 
 The actual query string is below: `SELECT * FROM users where username='admi'||(CHAR(12+LENGTH(' AND password=')*7))||'' `
 
