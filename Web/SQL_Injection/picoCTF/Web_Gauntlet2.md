@@ -16,7 +16,7 @@ Hints:
 
 
 ## Write-up: 📝
-Compared to first **Web Gauntlet". This challenge only have 1 round but more difficult.
+This challenge only have 1 round 
 
 ## Solution: 💯
 
