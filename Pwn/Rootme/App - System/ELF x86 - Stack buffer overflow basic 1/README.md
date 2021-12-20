@@ -40,15 +40,20 @@ int main()
 - Var **check** is declared first, after **buf**; so **check** is nearer to the top of the stack than **buf**, which makes it able to override the value of **check**.<br>
 - Disassembling the main function and we set break point at the **fgets function line**. Then run the program
 
-![image](https://user-images.githubusercontent.com/48288606/146743588-ed79be7a-e9f6-48b8-9aa2-a14343cbf808.png)
+```
+gdb-peda$ b*main+55
+Breakpoint 1 at 0x804857d
+```
 
 - Try inputing `aaaaaaaa` and watch that value's address.
 
 ![image](https://user-images.githubusercontent.com/48288606/146744069-794864a9-8906-4e64-a346-9bb1abda2bcb.png)
 
 - Here, we examine the address of **aaaa** and in range 20 adjacent addressand  we see that our **check** 's value is at **0xbffffb0c**. And our input **aaaa** is at **0xbffffae4**. So we need the calculate the distance for writing the desired value to the proper position. 
-
-![image](https://user-images.githubusercontent.com/48288606/146745301-7402ef93-29aa-4605-a747-d7eac50acbd0.png)
+```
+gdb-peda$ p/d 0xbffffb0c-0xbffffae4
+$1 = 40
+```
 
 ### Solution:
 
