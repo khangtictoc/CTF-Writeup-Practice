@@ -4,7 +4,7 @@
 - Level: Very Easy <br><br>
 ![image](https://user-images.githubusercontent.com/48288606/141502028-c005e26c-0784-400c-a79d-14c12a79e000.png)
 ## Write-up:
-This challenge is not required to use **GDB**. Look at the code:
+Look at the code:
 ```
 #include <unistd.h>
 #include <sys/types.h>
@@ -37,7 +37,17 @@ int main()
 }
 ```
 - If we can change the change check's value from **"0x04030201"** to **"0xdeadbeef"**, we can pass the challenge by opening the shell. <br>
-- Var **check** is declared first, after **buf**; so **check** is nearer to the top of the stack than **buf**. Beside, **buf** takes "45 bytes" input while "40 bytes" in declaration, which makes it able to override the value of **check**.<br>
+- Var **check** is declared first, after **buf**; so **check** is nearer to the top of the stack than **buf**, which makes it able to override the value of **check**.<br>
+- Disassembling the main function and we set break point at the **fgets function line**. Then run the program
+
+![image](https://user-images.githubusercontent.com/48288606/146743588-ed79be7a-e9f6-48b8-9aa2-a14343cbf808.png)
+
+- Try inputing `aaaa` and watch that value's address.
+
+![image](https://user-images.githubusercontent.com/48288606/146744069-794864a9-8906-4e64-a346-9bb1abda2bcb.png)
+
+- Here, we examine the address of **aaaa** and in range 20 adjacent addressand  we see that our **check** 's value is at **0xbffffb0c**. And our **aaaa** is at **0xbffffae4**. So we need the calculate the distance just write the desired value to the proper position. 
+
 ### Solution:
 - Fill the first 40 bytes of **buf** with arbitrary character, then with the satisfied value **"0xdeadbeef"**. <br>
  Command: `python -c "print('a'*40 +'\xef\xbe\xad\xde')"| ./ch13` <br>
