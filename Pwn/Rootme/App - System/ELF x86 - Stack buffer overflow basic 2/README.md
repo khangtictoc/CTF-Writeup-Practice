@@ -32,6 +32,7 @@ void main()
 ```
 
 - As a normal code flow, the program will point to the address of **sup()** function and execute it. So we need to override the "ret addr" and point it to **shell()** function. - Using gdb and disassembler the **main()** function and save the address of **shell (0x08048516)** <br>
+**Note:** In this code, we overflow the buffer inside **sup** function.
 
 ![image](https://user-images.githubusercontent.com/48288606/146747232-e78b70c2-9af0-413a-a20d-2b39be64cf96.png)
  
@@ -50,7 +51,7 @@ Breakpoint 1 at 0x8048584
 ![image](https://user-images.githubusercontent.com/48288606/146752691-aa64fb0d-7b34-4ea0-ab63-1097ee23671f.png)
 
 
-- **sup** is at **0xbffffb1c**. Calculate the distance from **buffer** to address of **sup function**.
+- **sup** is at **0xbffffb1c**. Calculate the distance from **buffer** to address of **sup** function.
 ```
 gdb-peda$ p/d 0xbffffb1c-0xbffffa9c
 $5 = 128
