@@ -30,7 +30,7 @@ void main()
     func();
 }
 ```
-## Write-up:
+
 - As a normal code flow, the program will point to the address of **sup()** function and execute it. So we need to override the "ret addr" and point it to **shell()** function. - Using gdb and disassembler the **main()** function and save the address of **shell (0x08048516)** <br>
 
 ![image](https://user-images.githubusercontent.com/48288606/146747232-e78b70c2-9af0-413a-a20d-2b39be64cf96.png)
