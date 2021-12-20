@@ -46,7 +46,7 @@ int main()
 
 ![image](https://user-images.githubusercontent.com/48288606/146744069-794864a9-8906-4e64-a346-9bb1abda2bcb.png)
 
-- Here, we examine the address of **aaaa** and in range 20 adjacent addressand  we see that our **check** 's value is at **0xbffffb0c**. And our **aaaa** is at **0xbffffae4**. So we need the calculate the distance just write the desired value to the proper position. 
+- Here, we examine the address of **aaaa** and in range 20 adjacent addressand  we see that our **check** 's value is at **0xbffffb0c**. And our input **aaaa** is at **0xbffffae4**. So we need the calculate the distance just write the desired value to the proper position. 
 
 ![image](https://user-images.githubusercontent.com/48288606/146745301-7402ef93-29aa-4605-a747-d7eac50acbd0.png)
 
