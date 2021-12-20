@@ -48,6 +48,8 @@ int main()
 
 - Here, we examine the address of **aaaa** and in range 20 adjacent addressand  we see that our **check** 's value is at **0xbffffb0c**. And our **aaaa** is at **0xbffffae4**. So we need the calculate the distance just write the desired value to the proper position. 
 
+![image](https://user-images.githubusercontent.com/48288606/146745301-7402ef93-29aa-4605-a747-d7eac50acbd0.png)
+
 ### Solution:
 - Fill the first 40 bytes of **buf** with arbitrary character, then with the satisfied value **"0xdeadbeef"**. <br>
  Command: `python -c "print('a'*40 +'\xef\xbe\xad\xde')"| ./ch13` <br>
