@@ -57,7 +57,7 @@ Our aim is overwriting the **check**'s value. We leverage a vulnerability in
 with no **format specifier**. Examine the stack and find a way to change that value.
 
 ### Solution:
-Let's try looking into the stack by usual payload to discover the posibility of overwritting and "scanning" the stack<br>
+Let's try looking into the stack by usual payload to "scan" the stack<br>
 `./ch14 aaaa.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x.%x`<br>
 Output:
 
@@ -82,7 +82,7 @@ Output:
  - We already have 446 bytes above, to get the right value of first byte. We pad more **685 - 446 = 239**
  - We already have 685 bytes above, to get the right value of first byte. We pad more **990 - 685 = 305**
 
-Here's the layout of what we've done until now: 
+Then we will change the value of **check** in its address (the program 's already shown it in output). Here's the layout of what we've done:
 
 ![image](https://user-images.githubusercontent.com/48288606/146911826-3d6f1aa6-cec3-4516-83da-dbaae0f18105.png)
 
