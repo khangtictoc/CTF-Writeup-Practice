@@ -51,10 +51,6 @@ int main( int argc, char ** argv )
 References:
 
 [%n format specifier](https://www.geekforgeeks.org/g-fact-31/)<br>
-[Memset in C](https://en.cppreference.com/w/cpp/string/byte/memset)<br>
-[All printf in C](https://en.cppreference.com/w/c/io/fprintf)<br>
-
-
 
 Our aim is overwriting the **check**'s value. We leverage a vulnerability in 
 `snprintf( fmt, sizeof(fmt), argv[1] );` 
