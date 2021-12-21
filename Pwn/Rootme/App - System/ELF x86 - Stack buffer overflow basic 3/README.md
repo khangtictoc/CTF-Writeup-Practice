@@ -1,7 +1,10 @@
 # ELF x86 - Stack buffer overflow basic 3
 - Point: 25pts
 - Author: [Lyes](https://www.root-me.org/Lyes?lang=en),  10 April 2015
-- Level: Medium <br><br>
+- Level: Medium
+- SSH Access:&emsp;ssh -p 2222 app-systeme-ch16@challenge02.root-me.org
+- Password:&emsp;app-systeme-ch16
+
 ![image](https://user-images.githubusercontent.com/48288606/143521039-c69b3f39-c52e-4551-b2fa-9facc7ca23cf.png)
 
 ## Write-up:
