@@ -2,6 +2,8 @@
 - Point: 15pts
 - Author: [Lu33Y](https://www.root-me.org/Lu33Y?lang=en),  8 February 2012
 - Level: Easy<br><br>
+- SSH Access:&emsp;ssh -p 2222 app-systeme-ch5@challenge02.root-me.org
+- Password:&emsp;app-systeme-ch5
 ![image](https://user-images.githubusercontent.com/48288606/141501790-9851fa6d-9b74-44b1-9960-74e627795010.png)
 ## Write-up:
 
@@ -30,6 +32,7 @@ The vulnerability in `printf(argv[1]);`, it execute without **Format specifier".
 - Convert to ASCII text ([HextoText](https://www.rapidtables.com/convert/number/hex-to-ascii.html)):<br><br>
 ![image](https://user-images.githubusercontent.com/48288606/141614663-d2edc72c-3b5f-4267-9ec4-aefeb2fcfeb7.png)<br><br>
 As illustrated, a part of string above contains the real password; therefore, we just write these bytes into "big endian" [See script here](ELF%20x86%20-%20Format%20string%20bug%20basic%201.py) format and convert again to hex.<br>
+
 Pass: Dpa9d6)(Epamd
 
 
