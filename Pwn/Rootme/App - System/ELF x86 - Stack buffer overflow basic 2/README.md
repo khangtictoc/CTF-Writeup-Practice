@@ -1,7 +1,10 @@
 # ELF x86 - Stack buffer overflow basic 2
 - Point: 10pts
 - Author: [Lyes](https://www.root-me.org/Lyes?lang=en), 10 April 2015
-- Level: Very Easy <br><br>
+- Level: Very Easy
+- SSH Access:&emsp;ssh -p 2222 app-systeme-ch15@challenge02.root-me.org
+- Password:&emsp;app-systeme-ch15
+
 ![image](https://user-images.githubusercontent.com/48288606/141502136-47d2b4bd-50fe-47af-80a9-e3c294bfbf01.png)
 
 ## Write-up:
