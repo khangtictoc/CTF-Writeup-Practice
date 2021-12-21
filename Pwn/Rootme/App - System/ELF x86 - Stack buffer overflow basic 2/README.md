@@ -31,8 +31,10 @@ void main()
 }
 ```
 
-- As a normal code flow, the program will point to the address of **sup()** function and execute it. So we need to override the "ret addr" and point it to **shell()** function. - Using gdb and disassembler the **main()** function and save the address of **shell (0x08048516)** <br>
-**Note:** In this code, we overflow the buffer inside **sup** function.
+
+- As a normal code flow, the program will point to the address of **sup()** function and execute it. Using gdb and disassembler the **main()** function and save the address of **shell (0x08048516)** <br>
+- `void (*func)()=sup;` is a declaration of a function pointer and point to **sup** function. We can overflow **buffer** to overwrite this pointer and point again to **shell** function.
+
 
 ![image](https://user-images.githubusercontent.com/48288606/146747232-e78b70c2-9af0-413a-a20d-2b39be64cf96.png)
  
