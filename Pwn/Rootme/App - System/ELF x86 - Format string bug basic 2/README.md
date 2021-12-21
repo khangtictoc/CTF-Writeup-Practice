@@ -1,8 +1,12 @@
 # ELF x86 - Format string bug basic 2
 - Point: 20pts
 - Author: [Lyes](https://www.root-me.org/Lyes?lang=en),  8 April 2015
-- Level: Medium<br><br>
+- Level: Medium<br>
+- SSH Access:&emsp;ssh -p 2222 app-systeme-ch14\@challenge02.root-me.org
+- Password:&emsp;app-systeme-ch14
+
 ![image](https://user-images.githubusercontent.com/48288606/141644747-50305e8e-2a4d-4b42-8c15-5d3c4b322654.png)
+
 ## Write-up:
 
 ```
@@ -45,7 +49,11 @@ int main( int argc, char ** argv )
 }
 ```
 References:
-([%n format specifier](https://www.geekforgeeks.org/g-fact-31/))
+
+[%n format specifier](https://www.geekforgeeks.org/g-fact-31/)<br>
+[Memset in C](https://en.cppreference.com/w/cpp/string/byte/memset)<br>
+[All printf in C](https://en.cppreference.com/w/c/io/fprintf)<br>
+
 
 
 Our aim is overwriting the **check**'s value. We leverage a vulnerability in 
