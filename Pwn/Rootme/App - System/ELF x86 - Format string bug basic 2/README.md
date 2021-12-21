@@ -44,6 +44,10 @@ int main( int argc, char ** argv )
         }
 }
 ```
+References:
+([%n format specifier](https://www.geekforgeeks.org/g-fact-31/))
+
+
 Our aim is overwriting the **check**'s value. We leverage a vulnerability in 
 `snprintf( fmt, sizeof(fmt), argv[1] );` 
 with no **format specifier**. Examine the stack and find a way to change that value.
@@ -68,7 +72,7 @@ Output:
 >>> int(0x3de)
 990
 ```
-- We have to make these value increase continously in our stack so we ensure that **0xef < 0x1be < 0x2ad < 0x3de** and then we use **%hhn** to get 1 byte value to have our desired values. (We can use **%hn** if we use the first method - split into 2 parts of 2 bytes). Then we calculate the value to add between these bytes to get specific value. ([%n format specifier](https://www.geekforgeeks.org/g-fact-31/)
+- We have to make these value increase continously in our stack so we ensure that **0xef < 0x1be < 0x2ad < 0x3de** and then we use **%hhn** to get 1 byte value to have our desired values. (We can use **%hn** if we use the first method - split into 2 parts of 2 bytes). Then we calculate the value to add between these bytes to get specific value. 
  - We already have 16 bytes address, to get the right value of first byte. We pad more **239 - 16 = 223**
  - We already have 239 bytes above, to get the right value of first byte. We pad more **446 - 239 = 207**
  - We already have 446 bytes above, to get the right value of first byte. We pad more **685 - 446 = 239**
