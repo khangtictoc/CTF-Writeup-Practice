@@ -77,10 +77,10 @@ Output:
 990
 ```
 - We have to make these value increase continously in our stack so we ensure that **0xef < 0x1be < 0x2ad < 0x3de** and then we use **%hhn** to get 1 byte value to have our desired values. (We can use **%hn** if we use the first method - split into 2 parts of 2 bytes). Then we calculate the value to add between these bytes to get specific value. 
- - We already have 16 bytes address, to get the right value of first byte. We pad more **239 - 16 = 223**
- - We already have 239 bytes above, to get the right value of first byte. We pad more **446 - 239 = 207**
- - We already have 446 bytes above, to get the right value of first byte. We pad more **685 - 446 = 239**
- - We already have 685 bytes above, to get the right value of first byte. We pad more **990 - 685 = 305**
+  - We already have 16 bytes address, to get the right value of first byte. We pad more **239 - 16 = 223**
+  - We already have 239 bytes above, to get the right value of first byte. We pad more **446 - 239 = 207**
+  - We already have 446 bytes above, to get the right value of first byte. We pad more **685 - 446 = 239**
+  - We already have 685 bytes above, to get the right value of first byte. We pad more **990 - 685 = 305**
 
 Then we will change the value of **check** in its address (the program 's already shown it in output). Here's the layout of what we've done:
 
