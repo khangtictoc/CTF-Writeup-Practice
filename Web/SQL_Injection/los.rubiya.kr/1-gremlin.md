@@ -1,4 +1,4 @@
-Filter: 
+Filter(id&pw): `prob` | `_` | `.` | `()`
 
 ID: `' OR 1=1 -- `
 
