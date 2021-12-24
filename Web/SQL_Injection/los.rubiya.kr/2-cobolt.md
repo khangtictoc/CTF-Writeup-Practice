@@ -1,3 +1,5 @@
+Filter(id&pw): `prob` | `_` | `.` | `()`
+
 ID: `admin' -- `
 
 PW: `123`
