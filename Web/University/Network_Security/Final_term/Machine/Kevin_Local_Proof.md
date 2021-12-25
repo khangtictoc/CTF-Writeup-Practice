@@ -1,8 +1,8 @@
 # <img src="https://img.icons8.com/external-wanicon-lineal-color-wanicon/64/000000/external-machine-big-data-wanicon-lineal-color-wanicon.png"/> MACHINE: Kevin Local - Kevin Proof
 - IP Address: 192.168.19.151 <br>
 - Hint: ✍
-  - 
-  - 
+  - a
+  - b
 
 ## Write-up - Kevin Local:
 
