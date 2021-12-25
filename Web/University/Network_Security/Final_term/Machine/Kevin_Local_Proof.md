@@ -6,7 +6,7 @@
 
 ## Write-up - Kevin Local:
 
-- Scan các port bằng **nmap**, đây là payload nmap mình thường dùng nhất  `nmap -Pn -sV -sC -p- -A -T4 -vv 192.168.19.151 `
+- Scan các port bằng **nmap**, đây là payload nmap mình thường dùng nhất  `nmap -Pn -sV -sC -p- -A -T4 -vv 192.168.19.151 `<br>
 Ta có các port sau: 
 
 ```
