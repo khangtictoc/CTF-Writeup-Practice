@@ -1,11 +1,11 @@
-# <img src="https://img.icons8.com/external-wanicon-lineal-color-wanicon/64/000000/external-machine-big-data-wanicon-lineal-color-wanicon.png"/> MACHINE: Alpha Local
+# <img src="https://img.icons8.com/external-wanicon-lineal-color-wanicon/64/000000/external-machine-big-data-wanicon-lineal-color-wanicon.png"/> MACHINE: Alpha Local - Alpha Proof
 - IP Address: 192.168.19.150 <br>
 - Hint: ✍
   - json
   - Thử lại dirsearch
 
 
-## Write-up:
+## Write-up - Alpha Local:
 
 - Scan các port bằng **nmap**, đây là payload nmap mình thường dùng nhất  `nmap -Pn -sV -sC -p- -A -T4 192.168.19.150 `
 Ta có các port sau: 
@@ -54,7 +54,7 @@ Ta đã vào được Web Server. Xem file ở thư mục hiện hành thấy c�
 
 ![image](https://user-images.githubusercontent.com/48288606/147381820-6182f8f5-d60b-46cd-95aa-847ac9aaf1c4.png)
 
-## Leo thang đặc quyền:
+## Leo thang đặc quyền - Alpha Proof:
 
 Dùng lệnh `sudo -l` để xem quyền hạn thực thi
 
