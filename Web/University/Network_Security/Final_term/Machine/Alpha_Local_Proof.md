@@ -1,4 +1,4 @@
-# <img src="https://img.icons8.com/external-wanicon-lineal-color-wanicon/64/000000/external-machine-big-data-wanicon-lineal-color-wanicon.png"/> MACHINE: ALPHA LOCAL
+# <img src="https://img.icons8.com/external-wanicon-lineal-color-wanicon/64/000000/external-machine-big-data-wanicon-lineal-color-wanicon.png"/> MACHINE: Alpha Local
 - IP Address: 192.168.19.150 <br>
 - Hint: ✍
   - json
