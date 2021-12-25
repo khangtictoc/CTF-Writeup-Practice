@@ -70,7 +70,7 @@ Với user **root**, ta đã có thể truy tìm được file **proof.txt" và 
 
 ![image](https://user-images.githubusercontent.com/48288606/147381968-602f5382-5390-4c2d-85be-79d5ed4e12b1.png)
 
-Flag:
+### Flag:
 - Local.txt: **Wanna.One{@n_kh0ng_du@c_th1_01_r@_ph@i_kh0ng}**
 - Proof.txt: **Wanna.One{nqu0j_cu4_c0nq_ckunq_pk4j_dj_v40_l0nq_nqu0j,_cku_dunq_dj_v40_l0nq_d4t}**
 
