@@ -10,10 +10,17 @@
 Ta có các port sau: 
 
 ```
-22/tcp   open  ssh      syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.2 (Ubuntu Linux; protocol 2.0)
-80/tcp   open  http     syn-ack nginx 1.18.0 (Ubuntu)
-443/tcp  open  ssl/http syn-ack nginx 1.18.0 (Ubuntu)
-8080/tcp open  http     syn-ack Apache Tomcat
+42/tcp    open  tcpwrapped    syn-ack
+53/tcp    open  domain?       syn-ack
+80/tcp    open  http          syn-ack Microsoft IIS httpd 10.0
+135/tcp   open  msrpc         syn-ack Microsoft Windows RPC
+445/tcp   open  microsoft-ds? syn-ack
+3306/tcp  open  mysql?        syn-ack
+3389/tcp  open  ms-wbt-server syn-ack Microsoft Terminal Services
+5357/tcp  open  http          syn-ack Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+5526/tcp  open  unknown       syn-ack
+49670/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49671/tcp open  msrpc         syn-ack Microsoft Windows RPC
 ```
 
 
