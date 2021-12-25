@@ -7,7 +7,7 @@
 
 ## Write-up - Alpha Local:
 
-- Scan các port bằng **nmap**, đây là payload nmap mình thường dùng nhất  `nmap -Pn -sV -sC -p- -A -T4 192.168.19.150 `
+- Scan các port bằng **nmap**, đây là payload nmap mình thường dùng nhất  `nmap -Pn -sV -sC -p- -A -T4 -vv 192.168.19.150 `
 Ta có các port sau: 
 
 ```
