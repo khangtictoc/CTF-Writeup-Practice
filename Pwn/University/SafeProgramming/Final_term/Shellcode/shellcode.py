@@ -2,6 +2,7 @@ from pwn import *
 
 context.arch= 'amd64'
 sh = remote('45.122.249.68',10017)
+# sh = process('./shellcode')
 
 print(u64('.txt\0\0\0\0'))
 print(u64('ongCoDon'))
