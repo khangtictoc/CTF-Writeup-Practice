@@ -21,9 +21,15 @@ Ta có các port sau:
 5526/tcp  open  unknown       syn-ack
 49670/tcp open  msrpc         syn-ack Microsoft Windows RPC
 49671/tcp open  msrpc         syn-ack Microsoft Windows RPC
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
 ```
 
-
+Hint là DNS. Vì vậy mình nên tập trung vào port 53 và scan xem thử dịch vụ nó đang chạy là gì : `nmap -sV -p 53 192.168.19.151 `
+```
+PORT   STATE SERVICE VERSION
+53/tcp open  domain  Simple DNS Plus
+```
+Theo trên, server là một Domain Controller sử dụng dịch vụ **Simple DNS Plus**.
 
 ## Leo thang đặc quyền - Kevin Proof:
 
