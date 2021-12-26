@@ -7,3 +7,5 @@
   - write_size='short'
 
 ## Write-up:
+
+![image](https://user-images.githubusercontent.com/48288606/147414211-965fb417-8844-4497-ac59-3a2c893160f4.png)
