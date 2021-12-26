@@ -6,7 +6,7 @@
   - Dùng syscall ngoài open, read, write sẽ bị khóa
   - nc 45.122.249.68 10017
 - Hint:
-  - bạn Nhật Trường có một bài blog tương tự bài này trên x86, thử chuyển code sang x86-64 bạn sẽ giải được bài này link: https://drx.home.blog/2019/04/03/pwnable-tw-orw/
+  - Bạn Nhật Trường có một bài blog tương tự bài này trên x86, thử chuyển code sang x86-64 bạn sẽ giải được bài này link: https://drx.home.blog/2019/04/03/pwnable-tw-orw/
 
 ## Write-up:
 
