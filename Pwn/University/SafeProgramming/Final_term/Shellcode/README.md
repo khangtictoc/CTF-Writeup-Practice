@@ -5,5 +5,7 @@
   - Không cần quan tâm đến seccomp
   - Dùng syscall ngoài open, read, write sẽ bị khóa
   - nc 45.122.249.68 10017
+- Hint:
+  - https://drx.home.blog/2019/04/03/pwnable-tw-orw/
 
 Flag: **Wanna.One{ve_so_sang_mua_chieu_xo_em_nghi_anh_la_ai_ma_sang_cua_chieu_do}**
