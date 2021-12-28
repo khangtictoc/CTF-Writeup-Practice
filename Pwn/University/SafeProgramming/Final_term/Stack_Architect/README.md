@@ -16,7 +16,11 @@ Xem mã giả của từng hàm trên IDA. Xét tại hàm **main()**:
 
 ![image](https://user-images.githubusercontent.com/48288606/147556706-61c727af-4529-4697-b4b9-edd08f0e369b.png)
 
-Hàm main kiểm tra biến **check1**, nếu khác 0 thì thoát chương trình. Sau đó cho nhập chuỗi và tăng giá trị **check1** thêm 1. Tiếp đến xét hàm **win()**:
+Hàm main kiểm tra biến **check1**, nếu khác 0 thì thoát chương trình. Sau đó cho nhập chuỗi và tăng giá trị **check1** thêm 1. Ở đây vulner nằm ở hàm **gets** khi không xem xét giới hạn user nhập vào nên có thể overflow ở đây. Tuy nhiên ta không thể return về buffer để thực thi shellcode vì chế độ **NX** đang bật. 
+
+![image](https://user-images.githubusercontent.com/48288606/147589761-b03138a0-9693-4467-b34f-c0ef3fa39555.png)
+
+Vậy đây thuộc dạng bài "nhảy địa chỉ"  Tiếp đến xét hàm **win()**:
 
 ![image](https://user-images.githubusercontent.com/48288606/147556787-1d3b743f-db29-48e9-b804-26a833265cc0.png)
 
