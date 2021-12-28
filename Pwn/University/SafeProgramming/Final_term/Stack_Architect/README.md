@@ -20,7 +20,7 @@ Hàm main kiểm tra biến **check1**, nếu khác 0 thì thoát chương trìn
 
 ![image](https://user-images.githubusercontent.com/48288606/147556787-1d3b743f-db29-48e9-b804-26a833265cc0.png)
 
-Đây là hàm ta cần đi đến để thực thi shell. Nếu các biến **check2**, **check3**, **check4** khác 0 thì ta sẽ thực thi được command. Xét hàm **func1(int)**:
+Đây là mục tiêu ta cần đi đến để thực thi shell. Nếu các biến **check2**, **check3**, **check4** khác 0 thì ta sẽ thực thi được command và hoàn thành challenge. Xét hàm **func1(int)**:
 
 ![image](https://user-images.githubusercontent.com/48288606/147556763-b590f142-1ef8-4a5f-85c1-c87427adb8b9.png)
 
