@@ -24,11 +24,46 @@ Hàm main kiểm tra biến **check1**, nếu khác 0 thì thoát chương trìn
 
 ![image](https://user-images.githubusercontent.com/48288606/147556763-b590f142-1ef8-4a5f-85c1-c87427adb8b9.png)
 
-Hàm **func1** gán giá trị `check3 = 1` khi **check2 != 0** và **a1 = 536937736 (0x20010508)**, gán  `check2 = 1` khi **result = 0**; mà **result = 0** chỉ khi chuỗi **s1 = "I'm sorry, don't leave me, I want you here with me \~\~"**. Như vậy, tại đây ta mong muốn set giá trị cho **check2** và **check3**, ta phải gán được giá trị hợp lý cho biến **a1**, mà **a1** là đối số truyền vào nên ta phải pop sau khi vào hàm. Ta có hướng thực thi sau để thỏa mãn các điều kiện : **func1 -> func1 -> pop_a1 -> 536937736**.  Xét tại hàm **func2()**:
+Hàm **func1** gán giá trị `check3 = 1` khi **check2 != 0** và **a1 = 536937736 (0x20010508)**, gán  `check2 = 1` khi **result = 0**; mà **result = 0** chỉ khi chuỗi **s1 = "I'm sorry, don't leave me, I want you here with me \~\~"**. Như vậy, tại đây ta mong muốn set giá trị cho **check2** và **check3**, ta phải gán được giá trị hợp lý cho biến **a1**, mà **a1** là đối số truyền vào nên ta phải pop sau khi vào hàm. Ta có hướng thực thi sau để thỏa mãn các điều kiện : **func1 -> func1 -> pop_a1 -> 536937736**. 
+
+Xét tại hàm **func2()**:
 
 ![image](https://user-images.githubusercontent.com/48288606/147556732-fabc7098-f520-4d98-8cb4-3281e1f2dc03.png)
 
-Hàm **func2()** kiểm tra biến **check3 != 0** sau đó kiểm tra **v1 = 134553601 (0x8052001)** và gán `check4 = 1`. Tương tự, muốn set giá trị cho **check4** ta phải đáp ứng các điều kiện, ta phải thực thi công đoạn ở **func1()** trước, vì **func2()** kiểm tra **check3**. Một khi hoàn thành xong ta có thể nhảy đến hàm **win()**, luồng thực thi: **pop_v1 -> 134553601 -> func2 -> win**.
+Hàm **func2()** kiểm tra biến **check3 != 0** sau đó kiểm tra **v1 = 134553601 (0x8052001)** và gán `check4 = 1`. Tương tự, muốn set giá trị cho **check4** ta phải đáp ứng các điều kiện, ta phải thực thi công đoạn ở **func1()** trước, vì **func2()** kiểm tra **check3**. Pop giá trị cho biến **v1** trước khi vào hàm vì **v1** là biến local. Một khi hoàn thành xong ta có thể nhảy đến hàm **win()**, luồng thực thi: **pop_v1 -> 134553601 -> func2 -> win**.
+
+Kế đến, ta tìm các gadget cho payload:
+
+![image](https://user-images.githubusercontent.com/48288606/147575902-bed318de-3121-4a76-83d7-c3adb94f836e.png)
+
+Ở đây mình chọn đại thanh ghi để pop giá trị vào, miễn là không đụng vào và làm lỗi chương trình. Có mấy cái dùng không được nên mình thử từ trên xuống dưới và mình kiếm được gadget `pop esi ; pop edi ; pop ebp ; ret` có địa chỉ **0x08049421** 
+
+Về cơ bản đã xong, bây giờ ta sẽ tính toán số lượng byte để ghi đè buffer trước khi jump vào **func1()**. Đầu tiên đặt breakpoint tại hàm **gets**. Chạy chương trình nhập "aaaaaaaa" và dùng tại đó để kiểm tra buffer.
+
+![image](https://user-images.githubusercontent.com/48288606/147573501-1634578d-7407-4d11-b276-2db10e364fbb.png)
+
+Địa chỉ của buffer bắt đầu từ "0xffffd5c4". Examine thanh ghi EBP:
+
+![image](https://user-images.githubusercontent.com/48288606/147573856-9adeba91-df52-4acc-857d-22ca368ff785.png)
+
+Address của EBP là 0xffffd618 , vậy return address nằm ở trên cách 4 bytes có địa chỉ 0xffffd61c. Kích thước buffer tính được:
+
+```
+gdb-peda$ p/d 0xffffd61c - 0xffffd5c4
+$1 = 88
+```
+
+Cài đặt các giá trị ở đầu là con trỏ **result** (đệm giá trị này) và chuỗi string **s1** có giá trị "I'm sorry, don't leave me, I want you here with me \~\~" để đáp ứng điều kiện. Số byte còn lại sẽ đệm byte NULL vào, số lượng cần đệm là:
+
+```
+>>> 0x58 - 4 - len("I'm sorry, don't leave me, I want you here with me ~~")
+31
+```
+
+Stack tổng quan sau khi cài đặt sẽ có cấu trúc như sau:
+
+![image](https://user-images.githubusercontent.com/48288606/147575085-e0f45be4-813a-4874-8356-c88a57d4eda1.png)
+
 
 Tham khảo code exploit hoàn chỉnh [tại đây](stack.py)
 
