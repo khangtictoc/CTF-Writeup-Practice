@@ -101,7 +101,7 @@ Tham khảo code exploit hoàn chỉnh [tại đây](shellcode.py)
 
 Thử với file test:
 
-![image](https://user-images.githubusercontent.com/48288606/147572328-b512c441-0c4d-43dd-908b-2665abc2bdad.png)
+![image](https://user-images.githubusercontent.com/48288606/147572424-1476d6b7-f812-44d2-b429-b7099ebac9fc.png)
 
 
 Flag: **Wanna.One{ve_so_sang_mua_chieu_xo_em_nghi_anh_la_ai_ma_sang_cua_chieu_do}**
