@@ -62,7 +62,7 @@ Cài đặt các giá trị ở đầu là con trỏ **result** (đệm giá tr�
 
 Stack tổng quan sau khi cài đặt sẽ có cấu trúc như sau:
 
-![image](https://user-images.githubusercontent.com/48288606/147575085-e0f45be4-813a-4874-8356-c88a57d4eda1.png)
+![image](https://user-images.githubusercontent.com/48288606/147576825-1d9b27c5-756e-4a61-bef3-6a220d6f09e9.png)
 
 
 Tham khảo code exploit hoàn chỉnh [tại đây](stack.py)
