@@ -97,7 +97,7 @@ Code:
         'syscall'
 ```
 
-Tham khảo shellcode hoàn chỉnh [tại đây](AlastorCreeper/CTF-Writeup-Practice/blob/master/Pwn/University/SafeProgramming/Final_term/Shellcode/shellcode.py)
+Tham khảo shellcode hoàn chỉnh [tại đây](Shellcode/shellcode.py)
 
 
 Flag: **Wanna.One{ve_so_sang_mua_chieu_xo_em_nghi_anh_la_ai_ma_sang_cua_chieu_do}**
