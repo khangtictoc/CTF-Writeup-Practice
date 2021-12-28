@@ -36,7 +36,7 @@ Kế đến, ta tìm các gadget cho payload:
 
 ![image](https://user-images.githubusercontent.com/48288606/147575902-bed318de-3121-4a76-83d7-c3adb94f836e.png)
 
-Ở đây mình chọn đại thanh ghi để pop giá trị vào, miễn là không đụng vào và làm lỗi chương trình. Có mấy cái dùng không được nên mình thử từ trên xuống dưới và mình kiếm được gadget `pop esi ; pop edi ; pop ebp ; ret` có địa chỉ **0x08049421** 
+Ở đây mình chọn đại thanh ghi để pop giá trị vào, miễn là không đụng vào và làm lỗi chương trình. Có mấy cái dùng không được nên mình thử từ trên xuống dưới và mình kiếm được gadget `0x08049423 : pop ebp ; ret`
 
 Về cơ bản đã xong, bây giờ ta sẽ tính toán số lượng byte để ghi đè buffer trước khi jump vào **func1()**. Đầu tiên đặt breakpoint tại hàm **gets**. Chạy chương trình nhập "aaaaaaaa" và dùng tại đó để kiểm tra buffer.
 
