@@ -30,6 +30,7 @@ Hàm **func1** gán giá trị `check3 = 1` khi **check2 != 0** và **a1 = 53693
 
 Hàm **func2()** kiểm tra biến **check3 != 0** sau đó kiểm tra **v1 = 134553601 (0x8052001)** và gán `check4 = 1`. Tương tự, muốn set giá trị cho **check4** ta phải đáp ứng các điều kiện, ta phải thực thi công đoạn ở **func1()** trước, vì **func2()** kiểm tra **check3**. Một khi hoàn thành xong ta có thể nhảy đến hàm **win()**, luồng thực thi: **pop_v1 -> 134553601 -> func2 -> win**.
 
+Tham khảo code exploit hoàn chỉnh [tại đây](stack.py)
 
 
 Flag: **Wanna.One{neu_ban_chinh_phuc_duoc_chinh_minh_ban_co_the_chinh_phuc_duoc_the_gioi}**
