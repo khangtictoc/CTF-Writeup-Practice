@@ -32,5 +32,9 @@ Hàm **func2()** kiểm tra biến **check3 != 0** sau đó kiểm tra **v1 = 13
 
 Tham khảo code exploit hoàn chỉnh [tại đây](stack.py)
 
+Thử với file test:
+
+![image](https://user-images.githubusercontent.com/48288606/147570923-176db54a-61b8-40e9-9dd0-5bc2183b0755.png)
+
 
 Flag: **Wanna.One{neu_ban_chinh_phuc_duoc_chinh_minh_ban_co_the_chinh_phuc_duoc_the_gioi}**
