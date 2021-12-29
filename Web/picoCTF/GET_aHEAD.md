@@ -18,5 +18,5 @@ Hint:
 
 #### The Flag (for reference): ✔️
 ```
-picoCTF{th3_c0nsp1r4cy_l1v3s_6edb3f5f}
+picoCTF{r3j3ct_th3_du4l1ty_2e5ba39f}
 ```
