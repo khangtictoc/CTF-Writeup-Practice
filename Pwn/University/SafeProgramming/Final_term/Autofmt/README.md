@@ -58,6 +58,10 @@ payload = fmtstr.fmtstr_payload(10, {A_addr:A_Value, B_addr:B_Value}, write_size
 
 Tham khảo code exploit [tại đây](autofmt.py)
 
+Thử với file test:
+
+![image](https://user-images.githubusercontent.com/48288606/147619709-283c3320-0681-42ff-b2f2-819f26abccc3.png)
+
 **Note**: Bài này cho biết thêm được một công cụ tạo payload cho **format string** khá hay. Bình thường mà tách byte ghi đè cho cái giá trị đại loại như này **15826374329413380831** chắc tới năm con hươu mới xong, chưa kể còn random giá trị mỗi lần chạy. Challenge rất đáng giải 🥇 !!!
 
 Flag: **Wanna.One{do_cac_ban_tren_the_gian_nay_khoang_cach_nao_la_xa_nhat}**
