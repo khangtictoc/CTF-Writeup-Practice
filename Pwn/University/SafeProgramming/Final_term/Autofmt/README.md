@@ -25,6 +25,7 @@ Trong hint có hướng dẫn cách dùng hàm **fmtstr_payload** để tạo pa
 ![image](https://user-images.githubusercontent.com/48288606/147579540-36b83572-a682-4fe8-af6d-f2b91d475511.png)
 
 Cách dùng thì phải nói rất đơn giản, làm mình ban đầu cũng không nghĩ đây trở thành chall dễ nhất. Syntax: `fmtstr_payload(offset_fmt, addrA:valueA, addrB:valueB , ..., write_size='short')`
+
 Với: 
 - offset_fmt -> offset của chuỗi format string
 - addrA:valueA -> Cặp địa chỉ cần được ghi - giá trị mong muốn ghi có dạng dictionary.
