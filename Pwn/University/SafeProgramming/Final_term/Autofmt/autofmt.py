@@ -4,10 +4,10 @@ from pwn import *
 context.arch= 'amd64'
 sh = remote("45.122.249.68",10015)
 
-sh.recvuntil("a = ")
+sh.recvuntil(b'a = ')
 A_Value = int(sh.recvline().strip())
 
-sh.recvuntil("b = ")
+sh.recvuntil(b'b = ')
 B_Value = int(sh.recvline().strip())
 
 sh.recvuntil(b'a address: ')
