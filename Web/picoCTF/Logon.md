@@ -3,6 +3,8 @@
 **Point:** 100<br>
 **Description:** The factory is hiding things from all of its users. Can you login as logon and find what they've been looking at?
 https://jupiter.challenges.picoctf.org/problem/15796/ or http://jupiter.challenges.picoctf.org:15796
+Hint:
+- Hmm it doesn't seem to check anyone's password, except for Joe's?
 
 ## Write-up: 📝
 This is one of my first favorite CTF challenges to explore more in ```Inspect 🔍``` tools. The challenge also provide a hint which is essentially login as logon, means we need to login as administrator.<br>
