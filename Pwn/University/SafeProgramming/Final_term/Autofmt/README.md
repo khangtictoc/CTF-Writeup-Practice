@@ -34,6 +34,27 @@ Cú pháp đầy đủ trên document (tham khảo):
 
 ![image](https://user-images.githubusercontent.com/48288606/147580395-a4f73b93-5ca2-48d6-aca7-3493748d0349.png)
 
+Chúng ta cần có giá trị cần ghi đè, cái này trong quá trình thực thi chương trình đã in ra như dưới
+
+![image](https://user-images.githubusercontent.com/48288606/147618259-b152133f-5d7a-426f-a972-545d46281eb1.png)
+
+Ta cần xác định offset của format string bằng payload cơ bản: `AAAA.%p.%p.%p.%p.%p.%p.%p.%p.%p.%p.%p.%p......`.
+
+![image](https://user-images.githubusercontent.com/48288606/147618381-0574e171-2b2a-4102-ac05-6d1870166bb0.png)
+
+Theo kết quả, offset của chuỗi format string là 10. Chúng ta có giá trị a, b; địa chỉ a -> suy ra được địa chỉ b. Đoạn này chủ yếu là chúng ta xử lý chuỗi output để lấy giá trị. Ví dụ lấy giá trị a:
+
+```
+sh.recvuntil("a = ")
+A_Value = int(sh.recvline().strip())
+```
+
+Mình quy đổi ra số nguyên hết để làm đối số cho hàm. Payload của ta như sau:
+
+```
+payload = fmtstr.fmtstr_payload(10, {A_addr:A_Value, B_addr:B_Value}, write_size='short')
+```
+
 Tham khảo code exploit [tại đây](autofmt.py)
 
 **Note**: Bài này cho biết thêm được một công cụ tạo payload cho **format string** khá hay. Bình thường mà tách byte ghi đè cho cái giá trị đại loại như này **15826374329413380831** chắc tới năm con hươu mới xong, chưa kể còn random giá trị mỗi lần chạy. Challenge rất đáng giải 🥇 !!!
