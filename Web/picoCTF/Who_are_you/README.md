@@ -41,6 +41,8 @@ X-Forwarded-For: 31.15.32.0
 Accept-Language: sv
 ```
 
+Solve by python: [Code here!](solve.py)
+
 #### The Flag (for reference): ✔️
 ```
 picoCTF{http_h34d3rs_v3ry_c0Ol_much_w0w_20ace0e4}
