@@ -2,7 +2,7 @@
 **Tags:** Web Exploitation<br>
 **Point:** 100<br>
 **Description:** AUTHOR: ZARATEC/DANNY<br>
-Can you find the robots? https://jupiter.challenges.picoctf.org/problem/36474/ (link) or http://jupiter.challenges.picoctf.org:36474
+Can you find the robots? https://jupiter.challenges.picoctf.org/problem/36474/ (link) or http://jupiter.challenges.picoctf.org:36474 <br>
 Hint:
 - What part of the website could tell you where the creator doesn't want you to look?
 
