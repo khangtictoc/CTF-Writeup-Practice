@@ -1,6 +1,6 @@
 Source:
 
-```
+```php
 <?php 
   include "./config.php"; 
   login_chk(); 
