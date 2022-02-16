@@ -9,7 +9,7 @@
 
 ## Write-up:
 
-```
+```C
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
