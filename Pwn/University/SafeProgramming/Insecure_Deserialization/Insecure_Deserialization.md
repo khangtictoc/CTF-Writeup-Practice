@@ -6,7 +6,7 @@
 
 ## Write Up:<br>
 - Enter link, we see a PHP code
-```
+```PHP
 <?php
 #include "config.php";
 class User{
