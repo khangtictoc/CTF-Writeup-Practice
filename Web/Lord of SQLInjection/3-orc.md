@@ -85,7 +85,7 @@ print("Password of Administrator: ", adminPassword)
 ```
 We get the full password for admin login:
 
-![image](https://user-images.githubusercontent.com/48288606/154270130-49cda9fc-b71b-4e77-a935-bdf748949920.png)
+![image](https://user-images.githubusercontent.com/48288606/154281330-d52e01cb-b033-4861-95a9-fea26a6fde4b.png)
 
 
 Filter(pw): `prob` | `_` | `.` | `()`
