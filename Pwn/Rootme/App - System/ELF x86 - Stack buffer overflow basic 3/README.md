@@ -10,7 +10,7 @@
 ## Write-up:
 This challenge is not required to use **GDB**. Look at the code:
 
-```
+```C
 #include <stdio.h>
 #include <sys/time.h>
 #include <sys/types.h>
