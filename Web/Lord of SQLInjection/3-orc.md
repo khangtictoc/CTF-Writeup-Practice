@@ -53,7 +53,7 @@ Note:
 
 Result:
 
-![image](https://user-images.githubusercontent.com/48288606/154270629-4c5063ae-0dbf-4821-968f-982eaf11680d.png)
+![image](https://user-images.githubusercontent.com/48288606/154279600-86f8f63e-8def-4c8a-942c-4409eb4826fd.png)
 
 With the shown result, we will guess which character is stayed in each position. We can take advantages of **ascii()** and **substring()** function to make a comparison the password with the character we test. We try all the printable character in ascii code (from 32-> 126). Use this pattern to brute-force all the case of available password: `?pw=123' or ascii(substring(pw, {position}, 1)) = {ascii_number} -- char(32)`
 
@@ -93,3 +93,5 @@ Filter(pw): `prob` | `_` | `.` | `()`
 PW: `095a9852` 
 
 Payload: `?pw=095a9852`
+
+Code solve: [HERE](3-orc.py)
