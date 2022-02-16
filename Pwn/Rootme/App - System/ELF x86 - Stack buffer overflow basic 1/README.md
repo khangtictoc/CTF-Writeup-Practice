@@ -9,7 +9,7 @@
 
 ## Write-up:
 Look at the code:
-```
+```C
 #include <unistd.h>
 #include <sys/types.h>
 #include <stdlib.h>
