@@ -29,3 +29,5 @@ The value of **0x1234** is 4660.
 
 Payload: `echo "LETMEWIN" | ./fd 4660`
 
+Flag: **mommy! I think I know what a file descriptor is!!**
+
