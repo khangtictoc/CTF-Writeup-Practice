@@ -71,7 +71,7 @@ int main(int argc, char* argv[]){
 
 As the hint proposed, there is a unintentional vulnerability in this line: `if(fd=open("/home/mistake/password",O_RDONLY,0400) < 0)`
 
-Some compiler will alert errors, some would parse the code above into this : `if(fd = (open("/home/mistake/password",O_RDONLY,0400) < 0))`. The comparison with '0' will happen before assignment. Reference here: [Priority operator](https://en.cppreference.com/w/c/language/operator_precedence)
+Some compilers alert errors, some parse the code above into this : `if(fd = (open("/home/mistake/password",O_RDONLY,0400) < 0))`. The comparison with '0' will happen before assignment. Reference here: [Priority operator](https://en.cppreference.com/w/c/language/operator_precedence)
 
 And the password has the "Read" permission so it will return a non-negative integer; therefore, the **result > 0** and **fd = 0**. So in this line, `len=read(fd,pw_buf,PW_LEN)`, we could construct our password from input (STDIN(0))
 
