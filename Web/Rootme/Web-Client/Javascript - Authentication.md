@@ -24,7 +24,7 @@ function Login(){
 **pseudo** gets value of username input, **password** gets value of password input. Then they're both set to lowercase.
 So we have username and password to pass the challenge. (4dm1n && sh.org)
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/48288606/157893906-d9fe103a-6d72-4be9-bab5-e242b4143382.png" /> </p>
+<p align="center"> <img width="400px" height="150px" src="https://user-images.githubusercontent.com/48288606/157893906-d9fe103a-6d72-4be9-bab5-e242b4143382.png" /> </p>
 
 It tell us to submit with the valid password above. 
 
