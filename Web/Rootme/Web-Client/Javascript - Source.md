@@ -6,7 +6,7 @@
 
 ## Solution: 
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/48288606/157894850-7e058340-2b2a-4c44-a6fb-3bc4996cd1d5.png" /> </p>
+<p align="center"> <img widht="400px" height="150px" src="https://user-images.githubusercontent.com/48288606/157894850-7e058340-2b2a-4c44-a6fb-3bc4996cd1d5.png" /> </p>
 
 A prompt make us to enter the correct password. Open "Developer Tools" -> Source -> index: 
 
@@ -34,7 +34,7 @@ A prompt make us to enter the correct password. Open "Developer Tools" -> Source
 
 The password is **123456azerty**. Submit it !!!
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/48288606/157895195-f9677a26-9976-40a0-8548-9eeeec71bace.png" /> </p>
+<p align="center"> <img widht="400px" height="150px" src="https://user-images.githubusercontent.com/48288606/157895195-f9677a26-9976-40a0-8548-9eeeec71bace.png" /> </p>
 
 It tell us to submit the valid password above.
 
