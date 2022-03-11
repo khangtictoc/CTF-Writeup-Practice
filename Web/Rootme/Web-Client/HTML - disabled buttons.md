@@ -6,7 +6,7 @@
 
 ## Solution:
 
-We have a site with disabled text and button field. 
+We have a site with disabled text and button field. Open "Developer Tools" -> Source -> index:
 
 ![image](https://user-images.githubusercontent.com/48288606/157892320-326b9723-bfad-43c1-b0e4-9e53ab22feb3.png)
 
