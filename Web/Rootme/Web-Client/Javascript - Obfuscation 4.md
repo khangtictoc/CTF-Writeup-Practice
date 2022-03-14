@@ -239,6 +239,7 @@ if (n == 8932) {
         alert("Mauvais mot de passe!")
     }
 ```
+
 I've referenced many write-up and they find a suitable string to make `window.open()` triggered here. But it's not the correct password. But with that, we'd  know what `c.document.write(b)` writes to. **'b'** contains a string beginning with "<html>". Tks to this, we can brute-force to find our password. Also, if we take a look into the code, there's a loop resulted by "Modulo" operator and with some testing, the password is duplicated at every 6th characters. So the length of the password is 6. 
   
 And one more things we all awareness till now is the password only contains **readable** characters. Let's write some code.
@@ -246,7 +247,7 @@ And one more things we all awareness till now is the password only contains **re
 Brute-force each character at once. The code below compare if the **encrypt**  with **salt** and **key** (our input) equal with each character at each correct position in "<html>" as we guess before. Then it's the password.
   
 ```javascript
-var test = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+var test = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '-', '=', '~', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '+', '[', ']', '\\', '{', '}', '|', ';', "'", ':', '"', ',', '.', '/', '<', '>', '?']
 var key = "";
 var temp = "";
 var guess = "<html>"
