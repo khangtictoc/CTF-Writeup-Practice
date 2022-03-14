@@ -8,6 +8,8 @@
 
 ## Solution:
 
+References: [ChineseProPlayer](https://github.com/lyy289065406/CTF-Solving-Reports/tree/master/rootme/Web-Client/%5B14%5D%20%5B50P%5D%20Javascript%20-%20Obfuscation%204)
+
 This challenge is really "big deal" to me. It makes me focus on this "hardcore" helps me forget my Ex. I've read up some write-ups to realize the suitable method to solve it. Any way, enter the site. Password input requirement: 
 
 <p align="center"> <img width="400px" height="150px" src="https://user-images.githubusercontent.com/48288606/158101277-6cc1dc90-4612-436e-85bb-2e993586e7df.png"> </p>
