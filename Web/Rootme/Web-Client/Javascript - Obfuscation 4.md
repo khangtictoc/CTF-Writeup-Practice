@@ -265,8 +265,10 @@ for (var j =0; j< guess.length; j++){
 
 console.log(key);
 ```
+    
+![image](https://user-images.githubusercontent.com/48288606/158116383-16814906-08ac-4603-9f73-1602720cb20d.png)
 
-The password is "MyP4CKScks3". But wait, it's supposed to be has 6. Remember in the working flows `if (Encrypt(ð, key + test[i])[j] == guess[j])` can makes more one character valid in that position. 
+The password is "MyP4CKScks3#+[{;". But wait, it's supposed to be has 6. Remember in the working flows `if (Encrypt(ð, key + test[i])[j] == guess[j])` can makes more one character valid in that position. 
   
 I didn't come up with better code to solve in 1 run. So let's just debug the code by examining each position. Use this second code:
   
