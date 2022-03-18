@@ -28,7 +28,7 @@ Let's take action step-by-step:
 
 1. Run PHP server with **localhost** and optional **port** without any content: `php -S localhost:4444 `
 
-2. Public our server by tunneling. I use **ngrok** to server this purpose:
+2. Public our server by tunneling. I use **ngrok** to serve this purpose:
    - Connect to ngrok with your account token: `ngrok authtoken {your_account_token}`
    - Tunneling our local site to public network with port specified above: `ngrok http 4444`
    - Get the public link we get from ngrok and create with payload above.
