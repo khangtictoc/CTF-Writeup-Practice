@@ -16,7 +16,7 @@ Nothing was happened. Reversing our input, maybe XSS occurs in second input: `ha
 
 <p align="center"> <img width="400px" height="150px" src="https://user-images.githubusercontent.com/48288606/158943445-969975ce-0c9d-474c-a44c-c398dc3800a6.png"> </p>
 
-Now this proves XSS can be in action. Now we have get the **cookie** from the victim, in this challenge victim is **administrator**. We can handle that with `document.cookie`. But the point is how we can get it; as usual payload we use `alert`, `console.log`, ... it won't work when these actions take place in client side and we would only see our cookie on the screen. 
+Now this proves XSS can be in action. Now we have to get the **cookie** from the victim, in this challenge victim is **administrator**. We can handle that with `document.cookie`. But the point is how we can get it; as usual payload we use `alert`, `console.log`, ... it won't work when these actions take place in client side and we would only see our cookie on the screen. 
 
 We have to delivery all collected cookie from victim (administrator) to a specific server that we take control. To do that, we can think of a tag like `<img/>` to contain our server link in `src` attribute and when the victim **GET** an image from our source, we can see the full path **URL Request** and inject cookie to that URL, also find a way to "call" that image. Payload will look like this:
 
