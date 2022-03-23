@@ -6,11 +6,11 @@
 
 ## Solution:
 
-There's a simple calculator>
+There's a simple calculator
 
 <p align="center"><img width="350px" height="150px" src="https://user-images.githubusercontent.com/48288606/159746731-8fe14ffd-1aff-4a52-9e5f-db4a8b2f288d.png"/></p>
 
-Try enter `1 + 1`:
+Try to enter `1 + 1`:
 
 <p align="center"><img width="350px" height="200px" src="https://user-images.githubusercontent.com/48288606/159750532-1aff11d7-4eec-458e-861c-48d9b9bad165.png" /></p>
 
