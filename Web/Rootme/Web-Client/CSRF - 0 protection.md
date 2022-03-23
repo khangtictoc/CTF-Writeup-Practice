@@ -46,7 +46,7 @@ Changing `checkbox` as we've done previous. Create payload:
 - Set an `id=form` for easy **querySelector**, there's 1 form so we can confidently name any id  
 - Set `action` to "http://challenge01.root-me.org/web-client/ch22/?action=profile" for fixed path, we can "POST" data no matters the place(URL) we are
 - Add **javascript code** for auto-submit.
-- Put the payload in full **HTML format**. The payload 's contained in `<html></html` and in `<body></body>`
+- Put the payload in full **HTML format**. The payload 's contained in `<html></html>` and in `<body></body>`
 
 Your email: khangtictoc@gmail.com (arbitrary string)
 Comment:
