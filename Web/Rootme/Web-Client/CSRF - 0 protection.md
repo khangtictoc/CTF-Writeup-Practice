@@ -48,7 +48,7 @@ Changing `checkbox` as we've done previous. Create payload:
 - Add **javascript code** for auto-submit.
 - Put the payload in full **HTML format**. The payload 's contained in `<html></html>` and in `<body></body>`
 
-Your email: khangtictoc@gmail.com (arbitrary string)
+Your email: khangtictoc@gmail.com (arbitrary string) <br>
 Comment:
 
 ```html
