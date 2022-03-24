@@ -33,7 +33,7 @@ Only **admin** can do this action. But we could make **administrator** do the ac
 
 <p align="center"><img src="https://user-images.githubusercontent.com/48288606/159632033-7ee73905-fbe4-4313-9815-5ab0901ca2d8.png" ></p>
 
-With **Origin** and **Referer** headers, we use form with POST request to send data to bypass this. But there's is another things we should care for.
+With **Origin** and **Referer** headers, this can prevent CSRF if server checks it, but this chall does not use. But there's is another things we should care for.
 
 <p align="center"><img src="https://user-images.githubusercontent.com/48288606/159632330-9b687a4d-36c1-45d5-8399-97d8929bb325.png" ></p>
 
