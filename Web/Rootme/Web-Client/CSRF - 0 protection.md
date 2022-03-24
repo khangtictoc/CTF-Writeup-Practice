@@ -35,7 +35,7 @@ Only **admin** can do this action. Move to "Network" section, examine **Request 
 
 This meet requirements for CSRF:
 - Only **cookie** use to identify user
-- **Origin** and **Referer**. We use form with POST request to send data, we can bypass this
+- **Origin** and **Referer**. (This can prevent CSRF if server checks it, but this chall does not use)
 
 We could make **administrator** do the activation for us. Constructing a auto-submit form. Copy the given form:
 
