@@ -18,7 +18,7 @@ An error 's sent back. Increase by 1 columns for each testing. Finally, input : 
 
 <p align="center"><img src="https://user-images.githubusercontent.com/48288606/160246351-f381b7d1-2169-4c21-a0a9-543e52bab949.png"> </p>
 
-OK. That's look good ! With this, try to get the information from ** system database**. In SQLite, there's a system table with 5 columns `sqlite_master(type, name, tbl_name, rootpage, sql)`. We can choose 2 columns that we're interested in. Try:
+OK. That's look good ! With this, try to get the information from **system database**. In SQLite, there's a system table with 5 columns `sqlite_master(type, name, tbl_name, rootpage, sql)`. We can choose 2 columns that we're interested in. Try:
 
 ``` 
 site' union select name, sql from sqlite_master -- 
