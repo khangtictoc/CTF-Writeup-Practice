@@ -62,7 +62,14 @@ Well, a `users` table. This gotta be interesting. Get information with 3 field `
 
 <p align="center"><img src="https://user-images.githubusercontent.com/48288606/160248651-eb1df667-6128-4553-bc25-e5064c1a7632.png"> </p>
 
-No **username** appears to identify the **admin**. With a such few result, try to submit each password (The first one is correct)
+No **username** appears to identify the **admin**. With a such few result, try to submit each password (The first one is correct). Or we realize that only 2nd and 3rd columns are displayed. Final payload:
+
+```
+123 union select 1, username, password from users
+```
+
+<p align="center"><img src="https://user-images.githubusercontent.com/48288606/160249017-e1b16dbb-2dc5-45ec-ab93-fc73ead3c606.png"> </p>
+
 
 Flag: **aTlkJYLjcbLmue3**
 
