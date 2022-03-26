@@ -10,11 +10,17 @@ This site supplies more interactive things. We can use check-payload `1'` input 
 
 <p align="center"><img src="https://user-images.githubusercontent.com/48288606/160246202-9968e454-0bbc-400f-aeb6-f132aa3abf18.png"> </p>
 
-So we try to bypass this field to get **admin's password**. We have to determine how many columns are returned. By taking advantage of `UNION`, use `site' union select 1 -- `.
+So we try to bypass this field to get **admin's password**. We have to determine how many columns are returned. By taking advantage of `UNION`, use:
+```
+site' union select 1 -- `.
+```
 
 <p align="center"><img src="https://user-images.githubusercontent.com/48288606/160246287-3e3206ce-e81c-4e63-85de-589435a00428.png"> </p>
 
-An error 's sent back. Increase by 1 columns for each testing. Finally, input : `site' union select 1, 2 -- `
+An error 's sent back. Increase by 1 columns for each testing. Finally, input : 
+```
+site' union select 1, 2 -- `
+```
 
 <p align="center"><img src="https://user-images.githubusercontent.com/48288606/160246351-f381b7d1-2169-4c21-a0a9-543e52bab949.png"> </p>
 
