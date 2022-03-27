@@ -76,4 +76,6 @@ Final payload:
 %ab%27 or 1=1 -- 
 ```
 
+**NOTE: If anyone find better way to check our 2-bytes GBK character is valid. I'm pleased to learn with you**
+
 Flag: **iMDaFlag1337!**
