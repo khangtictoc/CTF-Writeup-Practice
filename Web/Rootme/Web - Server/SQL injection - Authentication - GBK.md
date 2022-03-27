@@ -70,4 +70,10 @@ Then forward request:
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/48288606/160289619-fc214eb3-8ab0-4b77-a027-bbec890ee38e.png"></p>
 
+Final payload: 
+
+```
+%ab%27 or 1=1 -- 
+```
+
 Flag: **iMDaFlag1337!**
