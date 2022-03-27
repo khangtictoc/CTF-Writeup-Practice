@@ -40,7 +40,7 @@ ASC
 
 Construct payload using `CAST()` and put into the second parameter in `ORDER BY`. Use a query for returning the result when error happens when `CAST()` is triggered. Beside, `CAST()` only have 1 value, make sure our query return 1 rows
 
-In PostgreSQL, there're 2 worth-mention table is `information_schema.tables` and `information_schema.columns` saving information for each database. We would try to retrieve columns's info. Payload:
+In PostgreSQL, there're 2 worth-mention table is `information_schema.tables` and `information_schema.columns` saving information for each database. We would try to retrieve table's info. Payload:
 
 ```
 asc, cast((select table_name from information_schema.talbes limit 1 offset 0) as int)
