@@ -31,6 +31,9 @@ ASC
 ```
 **NOTE: With some testing like using unique function like BINARY_CHECKSUM(MySQL), sqlite_verion(SQLite), ... and combine with error message format. We can easily detect this site use PostgreSQL**
 
+<p align="center"><img src="https://user-images.githubusercontent.com/48288606/160276600-7a6e1798-3548-4db4-b816-526c57061b6a.png"/> </p>
+
+
 [Reference the exploitation](https://portswigger.net/support/sql-injection-in-the-query-structure). To retrieve administrator’s password, we will take advantage of `CAST` function. This function's work is just simply trying to convert string to a specified type. For example, `CAST('123' as int)` will return `123`. But `CAST('khangtictoc' as int)` will return error message.
 
 **NOTE: With MySQL, if CAST doesn't success. It will return '0'**
