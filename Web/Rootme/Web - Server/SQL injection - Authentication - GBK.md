@@ -30,7 +30,7 @@ A message Erreur d'identification (Misidentification). Remember the **title** "D
 
 [Main reference](https://en.wikipedia.org/wiki/GBK_(character_encoding)#cite_note-gb18030-2005-7). And this also relates to a tip called "Bypassing the addslash()". Now, everything is clear! Our input with any characters like double quotes `"`, single quotes `'` or backslashes `\` will be added with 1 more backslashes `\` before them, which will escape the characters and make our query wrong.
 
-Our main mission is bypass it ! Luckily, they hint us we use a method call **multibyte character set**, some of these is `Shift-jis`, `jis`, `euc-jp`, `euc-kr`, ... And our popular type which the challenge recommend us to use is **GBK**. Our main idea is we add a **character** have a url-encoded form like `%xx` and add our single quote `'` (%27) to escape string. And when the server add backslashes `\`(%5C), which will construct a multi-byte string that we call "GBK character". 
+Our main mission is bypass it ! Luckily, they hint us we use a method call **multibyte character set**, some of these is `Shift-jis`, `jis`, `euc-jp`, `euc-kr`, ... And our popular type which the challenge recommend us to use is **GBK**. Our main idea is we add a **character** have a url-encoded form like `%xx` and add our single quote `'` (%27) to escape string. And when the server add backslashes `\`(%5C), which will construct a multi-byte string that we call "GBK character". It means we indirectly delete backslashes `\` base on **Constructing GBK characters**.
 
 Our payload will has a form of:
 
