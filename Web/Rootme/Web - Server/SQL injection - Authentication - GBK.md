@@ -40,7 +40,7 @@ When server add **backslash** `\` (**%5C**):
 
 `(%xx%5C)%27 or 1=1 -- ` -> Equivalent to `%xx\' or 1=1 --`
 
-And `%xx%5C` will create a **GDB character**. So server will take our payload as: `{character}' or 1=1 -- ` 
+And **%xx%5C** will create a **GBK character**. So server will take our payload as: `{character}' or 1=1 -- ` 
 
 So which's the character should we add ? Follow the table how **GDB characters** are encoded from the reference link above.
 
