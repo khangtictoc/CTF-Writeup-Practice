@@ -6,7 +6,7 @@
 
 **Description:** Retrieve administrator’s password.
 
-## Solution:
+## Solution:F
 
 First, we have to find the SQLi point. Try `1'` in login form but it's not worked. Access **Contents**, we can see the URL `?action=contents&order=ASC` with 2 parameters `action` and `order`. The possible SQLi point is in `order`.
 
@@ -63,7 +63,10 @@ while(True):
     i += 1
 ```
 
-This loop runs forever until we find a "doubting" table. After running a period of time, I realize the first table `m3mbr35t4bl3` is the correct table all the time (~.~) and other tables belong to system.
+This loop runs forever until we find a "doubting" table. After running a period of time, I realize the first table `m3mbr35t4bl3` is the correct table all the time   (~ . ~) and other tables belong to system.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/48288606/160277266-3bcfc109-0f86-458a-be28-2af7ab780bb7.png"/> </p>
+
 
 Try similar payload to retrieve all the **columns** in `information_schema.columns` which has our target table `m3mbr35t4bl3`
 
