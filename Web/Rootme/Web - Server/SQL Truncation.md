@@ -34,7 +34,7 @@ Password: (We can choose freely as long as having a length be greater or equal t
 khangtictoc123
 ```
 
-NOTE: `User already in DB` message is from back-end server, nothing relates to "Database Side". I just guess but maybe server reads our full input and compare with Pseudo `admin`, and if it has the same value, it will display error message; if we input a long long string start with "admin", server wouldn't recognize this, but in database it is automatically truncated the "redundant" string which be over the declared size. That's why if we register a new pseudo `admin`, server will reject. But if we input the above payload, server doesn't know the truncation from DB and considers its value to be different from `admin`, so it accept
+**NOTE: `User already in DB` message is from back-end server, nothing relates to "Database Side". I just guess but maybe server reads our full input and compare with Pseudo `admin`, and if it has the same value, it will display error message; if we input a long long string start with "admin", server wouldn't recognize this, but in database it is automatically truncated the "redundant" string which be over the declared size. That's why if we register a new pseudo `admin`, server will reject. But if we input the above payload, server doesn't know the truncation from DB and considers its value to be different from `admin`, so it accept**
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/48288606/160292269-563b3fcc-f8a2-45b4-a58a-3526f67fa741.png"> </p>
 
