@@ -14,7 +14,7 @@ We cannot penetrate this form, also cannot create `admin` user because this user
 
 Basically, **Truncate Error** happens when we declare a variable with size of (for example) `10`. And then user input more characters to that field `20`. Then user's input will be truncated to the max size declared before when handling with database (in this case is creating information). And if value in that field is not unique, we totally create a new user with the same name `admin` and our arbitrary password.
 
-**NOTE: Message `User already in DB` is from back-end server, nothing relates to "Database Side". In database, we even create many rows which has the same value in a field (Ex: `Pseudo`), you could check this and testing on your own DB.**
+**NOTE: Message `User already in DB` is from back-end server, nothing relates to "Database Side". I just guess but maybe server reads our full input and compare with Pseudo `admin`, and if it has the same value, it will reject and display error message; if we input a long long string start with "admin", server wouldn't recognize this, but in database it is automatically truncated the "redundant" string which be over the declared size. In database, we even create many rows which has the same value in a field (Ex: `Pseudo`), you could check this and testing on your own DB.**
 
 Go to source code (Ctrl + U) in "Register" , you will get a surprise. 
 
