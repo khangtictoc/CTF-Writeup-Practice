@@ -116,6 +116,6 @@ You can also check a normal "Internet Explorer" application runs by this (Defaul
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/48288606/160654348-af922ccb-b9ed-47a1-a3cb-027cdddf6d7c.png"></p>
 
-Now calculate the **path's md5 checksum**. I use [this site](https://www.md5hashgenerator.com/) for quick generating:
+Now calculate the **path's md5 checksum** `C:\Users\John Doe\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\iexplore.exe`. I use [this site](https://www.md5hashgenerator.com/) for quick generating:
 
 FLag: **49979149632639432397b3a1df8cb43d**
