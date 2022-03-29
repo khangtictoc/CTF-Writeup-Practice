@@ -118,7 +118,7 @@ You can also check a normal "Internet Explorer" application runs by this (Defaul
 
 Now calculate the **path's md5 checksum** `C:\Users\John Doe\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\iexplore.exe`. I use [this site](https://www.md5hashgenerator.com/) for quick generating
 
-Or using this command. `-n` for excluding the "trailing newline" and remember a special case `echo "\U"` will give nothing, `\U` will be deleted, use `echo -E "\\U"` to correctly execute. 
+Or using this command. `-n` for excluding the "trailing newline" and remember a special case in **Unix system**, `echo "\U"` will give nothing (because `\u` and `\U` is a unicode decode specification. Thus, standalone `\U` will be deleted) use `echo -E "\\U"` to correctly execute. 
 
 ```bash
 echo -n -E "C:\\Users\John Doe\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\iexplore.exe" | md5sum
