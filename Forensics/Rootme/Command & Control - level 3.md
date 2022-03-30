@@ -83,7 +83,7 @@ Name                                                  Pid   PPid   Thds   Hnds T
 
 At address of `0x87b6b030` there's a `iexplore.exe` process; but strangely, at `0x89898030`, `cmd.exe` is runnning as a sub-process, this is make me doubt. Some hacker often install malwares opening shell and running under other process.
 
-Show further info of this process. 
+Show further info of this process with PID `2772`
 
 ```
 ./volatility_2.6_lin64_standalone -f ch2.dmp --profile=Win7SP0x86 cmdline -p 2772
