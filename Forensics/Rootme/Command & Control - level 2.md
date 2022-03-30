@@ -27,7 +27,7 @@ For example, in my computer:
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/48288606/160636282-a1f340c5-3ea0-4786-8ee6-aa4cbe08dfe1.png"></p>
 
-First, dump the overview information to get `Profile` values:
+First, dump the overview information to get `Profile` values. Use `imageinfo`:
 
 ```bash
 ./volatility_2.6_lin64_standalone -f ch2.dmp imageinfo
@@ -36,7 +36,7 @@ First, dump the overview information to get `Profile` values:
 <p align="center"> <img src="https://user-images.githubusercontent.com/48288606/160637037-7eb1cb52-135a-4a81-b0e2-2c13b8aa189e.png"></p>
 
 
-Use profile `Win7SP0x86` or any profile you like to examine and show all `hivelist`. 
+Use profile `Win7SP0x86` or any profile you like to examine and show all hives in our image. Use `hivelist`:
 
 ```
 ./volatility_2.6_lin64_standalone -f ch2.dmp --profile=Win7SP0x86 hivelist
@@ -44,7 +44,7 @@ Use profile `Win7SP0x86` or any profile you like to examine and show all `hiveli
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/48288606/160641755-c2e2809b-4c06-4557-b1ea-4699222a4111.png"></p>
 
-We need to dump the information at specific address (we're interested in `\REGISTRY\MACHINE\SYSTEM` at virtual address of `0x8b21c008`) in hivelist and extract the value. Use `-K` to specify the rest of the **KPCR address**: 
+We need to dump the information at specific address (we're interested in `\REGISTRY\MACHINE\SYSTEM` at virtual address of `0x8b21c008`) in hivelist and extract the value. Use `printkey` with `-K` option to specify the rest of the **KPCR address**: 
 
 ```
 ./volatility_2.6_lin64_standalone -f ch2.dmp --profile=Win7SP0x86 printkey -o 0x8b21c008  -K 'ControlSet001\Control\ComputerName\ComputerName'
