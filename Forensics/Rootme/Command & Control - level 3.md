@@ -14,22 +14,7 @@ The uncompressed memory dump md5 hash is e3a902d4d44e0f7bd9cb29865e0a15de
 
 Tool Used: `Volatility`
 
-You received a same multi-layer compressed file as **Command & Control - level 3** challenge
-
-Extract with **Bzip2**: `bzip2 -d ch2.tbz2`<br>
-Extract with **POSIX tar archive**: `tar -xf ch2.tar`
-
-Now we have a dumped file **ch2.dmp**. Now our task is finding the malwares.
-
-Well, malwares is running and oftens lurk under processes.
-
-First, dump the overview information to get `Profile` values:
-
-```bash
-./volatility_2.6_lin64_standalone -f ch2.dmp imageinfo
-```
-
-<p align="center"> <img src="https://user-images.githubusercontent.com/48288606/160637037-7eb1cb52-135a-4a81-b0e2-2c13b8aa189e.png"></p>
+Continued from **Command & Control - level 2**. Now our task is finding malwares from dumped file
 
 
 Use profile `Win7SP0x86` or any profile you like and list all running process. 
