@@ -52,7 +52,7 @@ strings 2168.dmp | grep tcpreplay
 
 <p align="center"><img src="https://user-images.githubusercontent.com/48288606/160811558-f814eaa7-ee28-4892-a7fd-5054bbc2a638.png"> </p>
 
-We can see the connection has been built by hacker and then closed.
+We can see the connection has been built by hacker.
 
 
 
