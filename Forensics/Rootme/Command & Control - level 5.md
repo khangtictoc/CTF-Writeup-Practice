@@ -15,7 +15,7 @@ The uncompressed memory dump md5 hash is e3a902d4d44e0f7bd9cb29865e0a15de
 
 ## Solution:
 
-Tool Used: `Volatility`
+Tool Used: `Volatility`, `John the Ripper`
 
 Continued from **Command & Control - level 4**. Our task is find **John's password**.
 
