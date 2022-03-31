@@ -15,7 +15,7 @@ NB : This challenge require the clearance of the level 3.
 
 ## Solution:
 
-Tool Used: `Volatility`, `Wireshark`
+Tool Used: `Volatility`
 
 Continued from **Command & Control - level 5**. Our task is find **C&C domain**.
 
