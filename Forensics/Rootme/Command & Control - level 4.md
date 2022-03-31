@@ -39,7 +39,7 @@ There're some application need to be understood:
 
 So we can guess attacker opened a shell `cmd.exe` , then used `tcprelay.exe` for TCP port forwarder and `whoami.exe` for checking his user's role. But then he had closed the connection session. Basicly, commands input into `cmd.exe` are processed by `conhost.exe`, so if we're lucky , we could get more information from dumping `conhost.exe` 's memory.
 
-Create new directory for storing **dumped files** and use `memdump` and dump the process `2168`:
+Create new directory `testResult` for storing **dumped files** and use `memdump` to dump the process `2168`:
 
 ```bash
  mkdir testResult && ./volatility_2.6_lin64_standalone -f ch2.dmp --profile=Win7SP0x86 memdump -p 2772 -D testResult
