@@ -45,7 +45,7 @@ Redirect to a `hashedPassword.txt` file for further use. Take a quick glance in 
 
 > Have a deep look if you like ! [SAM file structure](https://www.yg.ht/blog/blog/archives/339/what-is-aad3b435b51404eeaad3b435b51404ee) / [LM and NT hash](http://www.adshotgyan.com/2012/02/lm-hash-and-nt-hash.html) 
 
-We just care of cracking **NT** hash. Cracking **LM** will give nothing. I use built-in tool `john` (or you can use `johnny`) to crack this hash string, use default `rockyou.txt` wordlist which is available in **Kali Linux**.
+We just care of cracking **NT** hash. Cracking **LM** won't give valid result (this's just for backward compatibility). I use built-in tool `john` (or you can use `johnny`) to crack this hash string, use default `rockyou.txt` wordlist which is available in **Kali Linux**.
 
 ```
 cp /usr/share/wordlists/rockyou.txt.gz ~ && gzip -d ~/rockyou.txt.gz
