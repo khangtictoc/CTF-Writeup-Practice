@@ -19,7 +19,7 @@ Tool Used: `Volatility`
 Continued from **Command & Control - level 3**. We've known that there's a running malicious process with PID `2772` - it's a backdoor. Now let's take a deep look into this process and see its connection' info. Use `netscan`:
 
 ```
-/volatility_2.6_lin64_standalone -f ch2.dmp --profile=Win7SP0x86 netscan | grep 2772
+./volatility_2.6_lin64_standalone -f ch2.dmp --profile=Win7SP0x86 netscan | grep 2772
 ```
 
 <p align="center"><img src="https://user-images.githubusercontent.com/48288606/160743498-72c4c94a-283d-4c80-b883-872c2a541ae0.png"> </p>
