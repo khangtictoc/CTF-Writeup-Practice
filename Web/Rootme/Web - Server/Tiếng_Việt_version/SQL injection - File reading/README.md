@@ -160,5 +160,7 @@ Output: **77be4fc97f77f5f48308942bb6e32aacabed9cef**. Password mình nhập vào
 
 <p align="center"><img src="https://user-images.githubusercontent.com/48288606/161094566-52dd9538-b282-453a-bf12-5f2a894d7f9e.png"></p>
 
+> UPDATE: Sau khi giải xong mình đi tham khảo các write-up khác. Mình nhận ra cách bypass bằng `concat()` với `char()` thật sự khá "banana" (@ @). Ở trong MySQL có một khái niệm là [Hexadecimal Literal](https://dev.mysql.com/doc/refman/8.0/en/hexadecimal-literals.html), sử dụng chuỗi định dạng hex hợp lệ sẽ convert ra string theo ASCII table. Ví dụ, `0x6B68616E67746963746F63` -> `'khangtictoc'`. Cách này đơn giản ngắn gọn hơn nhiều <3
+
 Flag: **superpassword**
 
