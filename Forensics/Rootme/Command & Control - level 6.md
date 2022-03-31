@@ -25,6 +25,8 @@ Create a `BckDoorRev` folder for dumped files, dump the whole malignant process 
 mkdir BckDoorRev && ./volatility_2.6_lin64_standalone -f ch2.dmp --profile=Win7SP0x86 procdump -p 2772 --dump-dir=BckDoorRev
 ```
 
+<p align="center"><img src="https://user-images.githubusercontent.com/48288606/161024574-d23a1792-5fe1-4306-89f3-2a2c17cf0f5e.png"></p>
+
 Look like it's a `.exe` file. Just examine the file for sure:
 
 ```bash
