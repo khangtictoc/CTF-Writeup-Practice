@@ -50,7 +50,7 @@ Lấy thông tin tên các cột tương ứng với table `member` đã xác đ
 2 union select 1, group_concat(column_name), 3, 4 from information_schema.columns where table_name='member' -- 
 ```
 
-Payload trên chắc chắn không hoạt động vì có hàm `addslashes()` quấy rối như phân tích ở trên. Ở đây mình có thể không dùng trực tiếp **string** mà dùng kiểu nối chuỗi điển hình với hàm `concat()` và `char()`. Ví dụ chuỗi `'abc'` sẽ thành `concat(char(97) , char(98) , char(99) )`. Dùng code python sau để generate cho nhanh:
+Payload trên chắc chắn không hoạt động vì có hàm `addslashes()` quấy rối như phân tích ở trên. Ở đây mình có thể không dùng trực tiếp **string** mà dùng kiểu nối chuỗi điển hình với hàm `concat()` và `char()`. Ví dụ chuỗi `'abc'` sẽ thành `concat(char(97) , char(98) , char(99) )`. Dùng [Code Python](Generating_string.py) sau để xử lý cho tiện:
 
 ```python
 ################# GENERATING STRING #################
@@ -124,6 +124,7 @@ concat(char(47) , char(99) , char(104) , char(97) , char(108) , char(108) , char
 
 <p align="center"><img src="https://user-images.githubusercontent.com/48288606/161085221-9122172e-572b-4f12-8b49-b9f51dfe6f92.png"></p>
 
+Tham khảo toàn bộ source nguồn [tại đây](index.php)
 Chú ý đến đoạn làm thế nào để print ra được `Authentication success !!`, tức là password đúng:
 
 ```php
