@@ -15,7 +15,7 @@ NB : This challenge require the clearance of the level 3.
 
 ## Solution:
 
-Tool Used: `Volatility`
+Tool Used: `Volatility`, `Hybrid Analysis`
 
 Continued from **Command & Control - level 5**. Our task is find **C&C domain**.
 
