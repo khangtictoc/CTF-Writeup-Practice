@@ -10,7 +10,7 @@
 
 ## Solution:
 
-> Lưu ý: Bài này hơi dài. Mình viết cho những người mới bắt đầu tìm hiểu về **Blind Injection** trong **SQLi** nên mình sẽ hướng dẫn gần như là **step-by-step**
+> Lưu ý: Bài này hơi dài. Mình viết cho những người mới bắt đầu tìm hiểu về **Blind Injection** trong **SQLi** nên mình sẽ hướng dẫn gần như là **step-by-step**. Mấy bài **Blind** không phải gu mình, thường đoán rất mất thời gian và **brute-force** như bài này (~ ~)
 
 Chúng ta có 1 login form: 
 
@@ -62,7 +62,7 @@ Mình sẽ dùng payload sau để lấy chiều dài của tên cột, lấy gi
 1' or length((select tbl_name from sqlite_master)) = 1 -- 
 ```
 
-Vì kết quả phép thử bên phải `or` chỉ là dúng hay không nên để xác định chính xác một con số thì mình phải **brute-force**. Dùng đoạn code Python sau đây :
+Vì kết quả phép thử bên phải `or` chỉ là đúng hay không nên để xác định chính xác một con số thì mình phải **brute-force**. Dùng đoạn code Python sau đây :
 
 ```python
 import requests
@@ -222,7 +222,7 @@ Cột 3:
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/48288606/161275509-fd40fb5e-00dc-413b-ae6a-3c6b6c51d040.png"></p>
 
-
+Vậy 3 cột lần lượt là: **username, password và year** (Đoán gần đúng 😋)
 ### TÌM ĐỘ DÀI CỦA PASSWORD
 Tương tự brute-force độ dài `password` với `username` là `admin` trong bảng `users`. Payload mẫu: 
 
