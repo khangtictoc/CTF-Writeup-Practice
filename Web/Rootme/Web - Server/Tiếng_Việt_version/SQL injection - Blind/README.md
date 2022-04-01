@@ -26,7 +26,7 @@ Thử tiếp một payload cơ bản:
 1' or 1=1 -- 
 ```
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/48288606/161240792-e537dc52-0b6d-40c9-af4e-000f71f3ea61.png"></p>
+<p align="center"> <img width=300px height=140px src="https://user-images.githubusercontent.com/48288606/161240792-e537dc52-0b6d-40c9-af4e-000f71f3ea61.png"></p>
 
 Thử payload với trường hợp sai:
 
@@ -34,7 +34,7 @@ Thử payload với trường hợp sai:
 1' or 1=2 -- 
 ```
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/48288606/161240977-359c6361-e01f-43be-89dd-2b097899b45e.png"></p>
+<p align="center"> <img width=350px height=120px src="https://user-images.githubusercontent.com/48288606/161240977-359c6361-e01f-43be-89dd-2b097899b45e.png"></p>
 
 Tóm tắt lại tổng quát kết quả nhập vào:
 - Mệnh đề của `WHERE` đúng -> Trả về "Welcome back user1 ! ..."
