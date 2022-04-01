@@ -42,8 +42,7 @@ Tóm tắt lại tổng quát kết quả nhập vào:
 - Cú pháp sai -> Lỗi error xuất hiện 
 > Lưu ý: Bài này còn dễ, cho error hiện lên luôn để biết sai cú pháp còn sửa. Nhiều bài cú pháp sai thì nó trả lại trang web như trường hợp 2 ở trên tìm lỗi syntax cũng mất thêm khối thời gian đó. Mấy lỗi syntax mình có thể test trên các SQL online để kiểm tra cho gọn
 
-=> Đồng thời không có kết quả cụ thể trả về .Vậy bài này sure kèo là dùng **SQLi Blind** 
-Chall này nếu ai biết **SQLi Blind** là gì thì rất dễ, hoàn toàn cơ bản và gần như không có filter. Sau một vài phép thử thì ta biết:
+=> Đồng thời không có kết quả cụ thể trả về .Vậy bài này sure kèo là dùng **SQLi Blind**. Chall này nếu ai biết **SQLi Blind** là gì thì rất dễ, hoàn toàn cơ bản và gần như không có filter. Sau một vài phép thử thì ta biết:
 
 Filter: `UNION`
 
