@@ -54,7 +54,7 @@ cp /usr/share/wordlists/rockyou.txt.gz ~ && gzip -d ~/rockyou.txt.gz
 Just for convenient using :)) -> Then use this wordlist with `john` to crack this "mess" stored in `hashedPassword.txt`:
 
 ```
-john --wordlist=~/rockyou.txt --format=NT ~/hashedPassword.tx
+john --wordlist=~/rockyou.txt --format=NT ~/hashedPassword.txt
 ```
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/48288606/160878375-5ac4e8fb-6564-46a1-ab1a-1a8e0f27f61d.png" > </p>
