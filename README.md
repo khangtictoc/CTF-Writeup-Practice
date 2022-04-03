@@ -12,7 +12,12 @@ Source :
 - https://ctflearn.com/
 - https://picoctf.org/
 
+Including subjects at my unniversity:
 
+- Network Security
+- System Programmming
+- Web and Application Security
+- Digital forensic
 
 **NOTE1: 🔠 I don't play Cryptography**
 
