@@ -1,4 +1,4 @@
-# Solved challenge:
+# Solved Challenges:
 
 ## SQL Injection: 
 
@@ -13,4 +13,8 @@
 9. SQL injection - File reading
 10. SQL injection - Blind
 
+## LFI:
 
+## RFI:
+
+## PHP:
