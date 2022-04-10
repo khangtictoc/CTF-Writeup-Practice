@@ -14,7 +14,7 @@ Ta thấy chuỗi này được lưu tại địa chỉ _0x00404060_ tại segme
 
 > Lưu ý: Sử dụng thao tác _Chuột phải -> Jump to xref_ lên tất cả các hàm ta sẽ biết được luồng gọi hàm như sau: _start() -> sub_401190() -> sub_4017B8() -> sub_401726_ với tham số truyền vào **lớn hơn 1**. Còn các hàm khác thực hiện công việc như cấp phát vùng nhớ, kiểm tra số lượng tham số, ... Ta chỉ quan tâm đến hàm chính ở trên.
 
-**a2** là length của chuỗi nhập vào, **a1** là number user nhập. Nếu ascii_code của các ký tự tại các vị trí** 0, 1, 2, 3, 4, 5, 6** thỏa: **83(S), 80(P), 97(a), 67(C), 73(I), 111(o), 83(S)** --> "SPaCIoS", thì kết quả trả về là **"Gratz man :)"** thành công.
+**a2** là length của chuỗi nhập vào, **a1** là number user nhập. Nếu ascii_code của các ký tự tại các vị trí **0, 1, 2, 3, 4, 5, 6** thỏa: **83(S), 80(P), 97(a), 67(C), 73(I), 111(o), 83(S)** --> "SPaCIoS", thì kết quả trả về là **"Gratz man :)"** thành công.
 
 Kiểm tra lại: 
 
