@@ -4,5 +4,5 @@
 
 | Tên bài | Thời gian giải | HĐH |
 | ------- | --------------| -----| 
-| [re1](re1)    |      1 phút    | Linux |
-| [re2](re2)   |    2 phút      | Window |
+| [re1](1-Excercises/re1)    |      1 phút    | Linux |
+| [re2](1-Excercises/re2)   |    2 phút      | Window |
