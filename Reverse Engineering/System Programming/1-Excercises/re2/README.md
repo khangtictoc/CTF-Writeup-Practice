@@ -1,6 +1,6 @@
 # Re2.exe
 
-Ta có 1 file **re2.exe**, chạy thử xem sao :
+Ta có 1 file PE (Window) **re2.exe**, chạy thử xem sao :
 
 <p align="center"> <img width=800 height=130 src="https://user-images.githubusercontent.com/48288606/162610127-d95a1035-8cee-4004-9e03-9261229716ea.png"></p>
 
