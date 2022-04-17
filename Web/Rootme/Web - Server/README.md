@@ -1,6 +1,6 @@
 # Solved Challenges:
 
-> NOTE: Challenge with 'beginner' will be explained more deep and detailed
+> NOTE: Challenge with 'beginner' will be explained more deep and detailed, learn fundamental knowledge for the following challs.
 
 ## SQL Injection: 
 
