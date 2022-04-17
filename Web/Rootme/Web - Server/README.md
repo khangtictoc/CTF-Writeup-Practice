@@ -1,8 +1,10 @@
 # Solved Challenges:
 
+> NOTE: Challenge with 'beginner' will be explained more deep and detailed
+
 ## SQL Injection: 
 
-1. SQL injection - Authentication
+1. SQL injection - Authentication (beginner)
 2. SQL injection - Authentication - GBK
 3. SQL injection - String
 4. SQL injection - Numeric
