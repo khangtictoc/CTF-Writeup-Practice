@@ -100,4 +100,6 @@ $users = array('admin' => 'OpbNJ60xYpvAQU8');
 
 ![image](https://user-images.githubusercontent.com/48288606/163721325-4799a398-f3fe-4c8c-8baa-6fb5d2c0842e.png)
 
+> NOTE: Việc truy cập file chỉ in ra nội dung trong file mà không render nó. Đó là lý do ta thấy source code. Lưu ý hàm [file_get_content()](https://www.php.net/manual/en/function.file-get-contents.php)
+
 Flag: **OpbNJ60xYpvAQU8**
