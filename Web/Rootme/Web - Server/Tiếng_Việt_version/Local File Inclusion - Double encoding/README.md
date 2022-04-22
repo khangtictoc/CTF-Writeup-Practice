@@ -43,7 +43,7 @@ Bây giờ mình sẽ thử payload `../` và phân tích. Double-encoded payloa
 
 Bên server dùng hàm [include()](https://www.php.net/manual/en/function.include.php) để lấy file, hàm này được xem là một hàm rủi ro nếu không có thao tác xử lý dữ liệu truyền vào như parameter `page`. Ngoài ra, đường dẫn mà chúng ta yêu cầu tài nguyên `../.inc.php` bị ra khỏi vùng cho phép `/tmp`. Đồng thời ta nhận ra chuỗi của chúng ta được concat với `.inc.php`. Vậy bình thường ta để giá trị `contact` thì file được truy vấn sẽ là `contact.inc.php`
 
-Với việc không liệt kê file trong kết quả trả về, ta không thể dò tìm file ta mong muốn. Đối với dạng LFI có một kỹ thuật là [PHP wrapper](https://www.php.net/manual/en/wrappers.php). Nó giống như những URI scheme, bên javascript có `javascript: <execute code>`, cung cấp giao thức giống kiểu URL cho các hàm như **include(), fopen(), ...** chỉ ra tên file dưới dạng đường dẫn.
+Với việc không liệt kê file trong kết quả trả về, ta không thể dò tìm file ta mong muốn. Đối với dạng LFI có một kỹ thuật là [PHP wrapper](https://www.php.net/manual/en/wrappers.php). Wrappers là một code bổ sung cho một stream để xử lý các giao thức / mã hóa cụ thể. Ví dụ: wrappers `http` biết cách dịch một URL thành một **HTTP** request cho một file trên máy chủ từ xa. Khi làm việc với wrapper vì luồng stream được xử lý và được read ra nên ouput sẽ là nội dung của một file nào đó (do mình tùy chọn). Tham khảo [thêm](https://www.php.net/manual/en/intro.stream.php#:~:text=Introduction%20%C2%B6&text=A%20wrapper%20is%20additional%20code,file%20on%20a%20remote%20server.)
 
 Áp dụng kỹ thuật này vào payload. Sử dụng `php://filter/resource=contact` với trang **contact**. Payload: 
 
@@ -165,6 +165,6 @@ Decode tương tự bằng `base64` command:
 
 Ta có được flag trong source code.
 
-> NOTE: Mình thấy đa số exploiting đề xuất sử dụng `php://filter/`. Mình vẫn không rõ tại sao khi sử dụng wrapper lại in được ra source code mà nếu không dùng thì trang sẽ trả lại code đã được render cho mình
+
 
 Flag: **Th1sIsTh3Fl4g!**
