@@ -145,4 +145,4 @@ Nội dung trong file render ra không có gì hết. Vô source code kiểm tra
 
 <p align="center"><img src="images/flag.png"></p>
 
-Flag: ****
+Flag: **lf1-Wr4pp3r_Ph4R_pwn3d**
