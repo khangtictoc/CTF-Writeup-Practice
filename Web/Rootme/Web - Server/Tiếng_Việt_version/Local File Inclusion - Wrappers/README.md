@@ -41,6 +41,8 @@ zip://archive.zip#dir/file.txt
 ```
 Với `archive.zip` là file cần được giải nén. Sau dấu `#` là đường dẫn đến file cụ thể cần được lấy ra 
 
+## Solution:
+
 Với việc sử dụng Wrapper, ta phải cần biết đường dẫn của file. Trang web sẽ output hình ảnh cho ta thấy nên ta có thể lấy thông tin này trong source code (Ctrl + U). Ví dụ, khi upload một file bất kỳ thành công:
 
 <p align="center"><img src="images/path.png"></p>
