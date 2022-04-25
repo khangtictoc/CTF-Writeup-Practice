@@ -165,6 +165,20 @@ Decode tương tự bằng `base64` command:
 
 Ta có được flag trong source code.
 
+## Explanation - How does it work? (Bonus):
 
+Hồi thời điểm mình làm mình chưa hiểu tại sao bên server lại thực thi được code PHP với double-extension file `.php.jpg`. Sau khi search một hồi thì mình đã tìm ra câu trả lời, sau đây là giải thích:
+
+Nguồn: https://stackoverflow.com/questions/8025236/is-it-possible-to-execute-php-with-extension-file-php-jpg
+
+Đại khái, trong _PHP trong khoảng phiên bản dưới 6.0_, trong file cấu hình `.htacess` chúng ta có thể cho phép bất kỳ một file định dạng nào `html`, `htm`, `jpg`, ... thực thi code PHP bên trong nó. Bên server của challenge có thể được cấu hình file `.htaccess` như sau:
+
+`AddType application/x-httpd-php .jpg`
+
+Hoặc:
+
+`AddType application/x-httpd-php .php.jpg`
+
+*Có lẽ server cố tình làm vậy để tạo challenge thôi :>, hiếm ai để một file định dạng khác mà có thể thực thi với PHP code format. Chal này chỉ xuất hiện ở phiên bản cũ.
 
 Flag: **Th1sIsTh3Fl4g!**
