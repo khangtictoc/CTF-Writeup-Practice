@@ -17,6 +17,26 @@
 
 ## LFI:
 
+1. Local File Inclusion (beginner)
+2. Local File Inclusion - Double encoding (beginner)
+3. Local File Inclusion - Wrappers
+
 ## RFI:
 
+1. Remote File Inclusion
+
+## Path/Directory Traversal:
+
+1. HTTP - Directory indexing
+2. Directory traversal
+
+## File upload:
+
+1. File upload - Double extensions (beginner)
+2. File upload - MIME type
+
 ## PHP:
+
+1. PHP - assert()
+2. PHP - Filters
+3. PHP - register globals
