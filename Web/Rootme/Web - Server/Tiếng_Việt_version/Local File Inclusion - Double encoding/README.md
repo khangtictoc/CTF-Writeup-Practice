@@ -171,7 +171,7 @@ Hồi thời điểm mình làm mình chưa hiểu tại sao bên server lại t
 
 Nguồn: https://stackoverflow.com/questions/8025236/is-it-possible-to-execute-php-with-extension-file-php-jpg
 
-Đại khái, trong _PHP trong khoảng phiên bản dưới 6.0_, trong file cấu hình `.htacess` chúng ta có thể cho phép bất kỳ một file định dạng nào `html`, `htm`, `jpg`, ... thực thi code PHP bên trong nó. Bên server của challenge có thể được cấu hình file `.htaccess` như sau:
+Đại khái, trong _PHP trong khoảng phiên bản dưới 6.0_, trong file cấu hình `.htacess` chúng ta có thể cho phép bất kỳ một file định dạng nào `html`, `htm`, `jpg`, ... thực thi code PHP bên trong nó, với từ khóa `AddType` ta có thể làm được việc này. Bên server của challenge có thể được cấu hình file `.htaccess` với cú pháp bên dưới như sau:
 
 `AddType application/x-httpd-php .jpg`
 
