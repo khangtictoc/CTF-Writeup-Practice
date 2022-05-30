@@ -4,7 +4,7 @@
 
 Ta xem chức năng và hành vi ứng dụng
 
-<p align="center"><img src="images/pentest1.jpg"></p>
+<p align="center"><img width=200 height=400 src="images/pentest1.jpg"></p>
 
 Nhập vào chuỗi và in ra thông báo => Không có gì lạ. Ta sẽ reverse file APK
 
