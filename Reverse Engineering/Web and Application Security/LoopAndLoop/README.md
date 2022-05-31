@@ -246,7 +246,7 @@ Theo như hình trên thì thời gian chạy là 2075 giây. Nên khi chạy c�
 
 Mã số đúng là `236492408`. Nhập vào ứng dụng:
 
-<p align="center"><img src="Images/appUI2.jpg"></p>
+<p align="center"><img width=200 height=400 src="Images/appUI2.jpg"></p>
 
 Easy game !!! 
 
