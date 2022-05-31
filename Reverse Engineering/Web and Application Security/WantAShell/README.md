@@ -142,7 +142,7 @@ Decode:
 
 Nhìn trông như một thông điệp, dịch ngược ký tự lại tại [Tex reverse](https://www.textreverse.com/):
 
-<p align="center"><img src="Images/texreverse.png"></p>
+<p align="center"><img width=400 height=180 src="Images/texreverse.png"></p>
 
 > NOTE: Khi nhập vào app vẫn không nhận và thoát ra ngoài. Nhưng mình tham khảo wu trên cộng đồng thì đây đúng là flag.
 
