@@ -102,7 +102,7 @@ Vì file này được [biên dịch động](https://developer.android.com/trai
 
 <p align="center"><img src="Images/IDA_func1.png"></p>
 
-Hàm `checkPasswd` nhận 3 tham số, mặc dù chuỗi nhập vào là 1 input. Với việc decompile đoạn code như trên, ta thấy chương trình xử lý 3 tham số cùng lúc và đưa vào biến `v6`, vậy biến này là input của user. 
+Hàm `checkPasswd` nhận 3 tham số, mặc dù chuỗi nhập vào là 1 input. Với việc decompile đoạn code như trên, tham số cuối là tham số đúng như định nghĩa (còn 2 tham số kia là 2 tham số môi trường để load hàm native) ta thấy chương trình xử lý 3 tham số cùng lúc và đưa vào biến `v6`
 
 > NOTE: Đoạn này có thể bỏ qua
 
