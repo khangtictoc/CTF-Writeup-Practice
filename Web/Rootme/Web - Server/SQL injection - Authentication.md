@@ -30,7 +30,7 @@ Password: `123`
 
 Query's sent. Nothing happen, this's usually filter and they filter `or` with only username: `admin`. (We can check to verify this). Use payload without `or`:
 
-Username: `admin' or 1=1 -- `
+Username: `admin' -- `
 
 Password: `123`
 
