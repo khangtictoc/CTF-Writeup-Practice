@@ -126,6 +126,12 @@ test> db.test.insertOne({"flag": "3@sY_n0_5q7_1nj3c710n"})
   insertedId: ObjectId("63122a536fe86849cca910f7")
 }
 test> db.test.find({"flag": {$regex: "^3@sY_n0_5q7_1nj3c710n$$$$$$$$$$$$$$$$$$$$"}})
+[
+  {
+    _id: ObjectId("63122a536fe86849cca910f7"),
+    flag: '3@sY_n0_5q7_1nj3c710n'
+  }
+]
 ```
 
 Flag: **3@sY_n0_5q7_1nj3c710n**
