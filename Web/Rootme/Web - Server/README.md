@@ -15,6 +15,11 @@
 9. SQL injection - File reading
 10. SQL injection - Blind
 
+## NoSQL Injection:
+
+1. NoSQL injection - Blind
+2. NoSQL injection - Authentication
+
 ## LFI:
 
 1. Local File Inclusion (beginner)
