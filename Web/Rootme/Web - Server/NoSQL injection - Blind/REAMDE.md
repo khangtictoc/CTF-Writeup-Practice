@@ -117,7 +117,7 @@ test> db.test.find({"flag": {$regex: "^3|"}})
 ]
 ```
 
-`Wrong match case when ending the searching`. The case includes ['&'], this shows the mark of ending.
+`Wrong match case when ending the searching`. The case includes ['&'], this shows the mark of ending the pattern, so it's still matched.
 
 ```shell
 test> db.test.insertOne({"flag": "3@sY_n0_5q7_1nj3c710n"})
