@@ -18,7 +18,7 @@
 ## NoSQL Injection:
 
 1. NoSQL injection - Blind
-2. NoSQL injection - Authentication
+2. NoSQL injection - Authentication (beginner)
 
 ## LFI:
 
