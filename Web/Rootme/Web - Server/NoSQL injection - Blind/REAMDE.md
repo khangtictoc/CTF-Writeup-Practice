@@ -1,10 +1,10 @@
 # NoSQL injection - Authentication
 
-**Point**: 35 Points
+**Point**: 45 Points
 
-**Title**: Find me
+**Title**: Flag Checker
 
-**Description**: Find the username of the hidden user.
+**Description**: This is a little web application to test challenge flags. Retrieve the flag for the challenge ’nosqlblind’.
 
 ## Analysis (This just for newbie):
 
