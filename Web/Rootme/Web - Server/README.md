@@ -45,3 +45,13 @@
 1. PHP - assert()
 2. PHP - Filters
 3. PHP - register globals
+4. PHP - Command injection
+
+## HTTP Protocol:
+1. HTTP - IP restriction bypass
+2. HTTP - Open redirect
+3. HTTP - User-agent
+
+## Others:
+1. Weak password
+2. HTML - Source code
