@@ -30,7 +30,7 @@ This vulnerability allows us to modify the content of the ciphertext , and the r
 
 So the keypoint is that we could bruteforce all the positions of the key that represents, for example, some kind of value `admin = 0` exists, then we can change it to `1`.
 
-Our original key before decrypting only contains [a-z], [a-Z], [0-9] characters, we will go through all of this for each position. The changes will reflects to the string after the server evaluate **admin or not** with its key.
+Our original key before decrypting only contains [a-z], [a-Z], [0-9] characters, we will go through all of this for each position. The changes will reflects to the string after the server evaluate **admin or not** with its key. Since we control the cookie, we control the "decrypted" string.
 
 Workflow:
 
