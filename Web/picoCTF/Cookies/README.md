@@ -1,4 +1,4 @@
-# More Cookies ❓
+# Cookies ❓
 **Tags:** Web Exploitation<br>
 **Point:** 40  <br>
 **Description:** Who doesn't love cookies? Try to figure out the best one. http://mercury.picoctf.net:54219/
